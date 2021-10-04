@@ -2,6 +2,6 @@
 
 $lang = array(
 
-    'title' => 'Bienvenue sur mon site',
+    'title' => 'Bienvenue sur le site EcoSense',
 
 );

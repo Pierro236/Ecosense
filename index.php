@@ -1,14 +1,10 @@
 <?php
-try {
-    $db = new PDO('mysql:host=localhost:3306;dbname=ecosense;charset=utf8', 'root', '');
-} catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
-}
 
+include 'php/config.php';
 
-if (isset($_GET['lang']) && !empty($_GET['lang'])) {
-    if (file_exists('lang/' . $_GET['lang'] . '.php'))
-        require_once('lang/' . htmlentities($_GET['lang']) . '.php');
+if (isset($_POST['lang']) && !empty($_POST['lang'])) {
+    if (file_exists('lang/' . $_POST['lang'] . '.php'))
+        require_once('lang/' . htmlentities($_POST['lang']) . '.php');
     else
         require_once('lang/fr.php');
 } /*else if (file_exists('lang/' . $_SERVEUR['HTTP_ACCEPT_LANGUAGE'] . '.php')) {
@@ -17,8 +13,8 @@ if (isset($_GET['lang']) && !empty($_GET['lang'])) {
     require_once('lang/fr.php');
 }
 
-if ($_GET) {
-    $_GET['lang'] = $_GET['lang'];
+if ($_POST) {
+    $_POST['lang'] = $_POST['lang'];
 
 
     /*if (!empty($num) and !empty($destination)) {
@@ -51,10 +47,10 @@ if ($_GET) {
 
 <body>
     <div>
-        <form method="GET" action="">
+        <form method="POST" action="">
             <select id="lang" name="lang">
-                <option value="en">Anglais</option>
-                <option value="fr">francais</option>
+                <option value="fr">Francais</option>
+                <option value="en">English</option>
             </select>
             <input type="submit" value="Envoyer">
         </form>
