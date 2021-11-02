@@ -46,6 +46,7 @@ if ($_POST) {
 </head>
 
 <body>
+
     <div>
         <form method="POST" action="">
             <select id="lang" name="lang">
@@ -57,6 +58,27 @@ if ($_POST) {
 
         <h1><?php echo $lang['title']; ?></h1>
     </div>
+
+    
+    <div id="container">
+           
+            
+            <form id="login" action="verification.php" method="POST">
+                <h1><?php echo $lang['Login']; ?></h1>
+                
+                <label><b>Email</b></label>
+                <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+
+                <label><b><?php echo $lang['mdp']; ?></b></label>
+                <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+
+                <input type="submit" name="Btncx"  value='Connexion' >
+                
+            </form>
+        </div>
+   
+   
+    
 </body>
 
 </html>
