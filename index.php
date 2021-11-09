@@ -64,9 +64,14 @@ if ($_POST) {
            
             
             <form id="login" action="verification.php" method="POST">
-                <h1><?php echo $lang['Login']; ?></h1>
+                <div id="headerform">
+                    <p><?php echo $lang['Login']; ?></p>
+                    <img src="img/logo.png" alt="logo">
+                    
+            
+                </div>
                 
-                <label><b>Email</b></label>
+                <label><b>Identifiant</b></label>
                 <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
 
                 <label><b><?php echo $lang['mdp']; ?></b></label>
@@ -76,9 +81,13 @@ if ($_POST) {
                 
             </form>
         </div>
+    <footer class="footer">
+        <h2 class="CGU">conditions générales d'utilisation</h2>
+    </footer>
    
    
     
 </body>
+
 
 </html>

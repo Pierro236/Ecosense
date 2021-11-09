@@ -1,6 +1,10 @@
 body {
-  background: url("../img/wallepaper.jpg") no-repeat center center fixed;
-  color: black;
+  background: url("../img/openspace.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
+  color:black;
   font-family: Arial, Helvetica, sans-serif;
 }
 .header{
@@ -28,8 +32,9 @@ background: url("../img/logo.jpg");
   width:100%;
   padding: 30px;
   border: 1px solid #f1f1f1;
-  background: rgb(188, 241, 188);
+  background: rgb(188, 241, 188, 0.4);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  
 }
 
 input[type=text], input[type=password] {
@@ -56,4 +61,37 @@ input[name=Btncx] {
   border: none;
   cursor: pointer;
   width: 100%;
+}
+
+p{
+  color:whitesmoke;
+  font-size:250%;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1{ 
+  font-family:monospace
+  font-size:250%
+  
+}
+#headerform{
+  display:flex;
+  flex-direction: row;
+}
+#headerform img{
+  width: 70px;
+  height: 70px;
+  padding-left: 45px;
+}
+.footer{
+  background-color:  rgba(91, 166, 237, 0.7); ;
+  position: top;
+  width: 100%;
+  padding-top: 25px;
+  height: 50px;
+}
+
+.CGU{
+  float: right;
+  padding-bottom: 12px;
 }
