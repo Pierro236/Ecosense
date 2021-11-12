@@ -1,5 +1,5 @@
 body {
-  background: url("../img/wallepaper.jpg") no-repeat center center fixed;
+  /*background: url("../img/wallepaper.jpg") no-repeat center center fixed;*/
   color: black;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -12,11 +12,8 @@ body {
 text-align: center;
 text-decoration: none;
 }
-#LOGO{
-text-align: left;
-background: url("../img/logo.jpg");
-}
-#container{
+
+.container{
   float: left;  
   width:40%;
   margin:0 auto;
@@ -54,6 +51,47 @@ input[name=Btncx] {
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
+  border-radius: 20px;
   cursor: pointer;
   width: 100%;
+}
+
+.some-page-wrapper {
+  margin: 15px;
+  background-color: red;
+}
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+
+.row2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.container {
+  
+  height: 500px;
+}
+
+.right_columm {
+  background-image: url("../img/Open\ space.jpg") ;
+  height: 500px;
+  width: 500px;
 }

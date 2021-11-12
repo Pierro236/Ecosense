@@ -46,7 +46,8 @@ if ($_POST) {
 </head>
 
 <body>
-
+<div class="page-wrapper">
+<div class="row">
     <div>
         <form method="POST" action="">
             <select id="lang" name="lang">
@@ -58,12 +59,12 @@ if ($_POST) {
 
         <h1><?php echo $lang['title']; ?></h1>
     </div>
-
-    
-    <div id="container">
+<div class="row2">
+    <div class="columm">
+        <div class="container">
            
             
-            <form id="login" action="verification.php" method="POST">
+                <form id="login" action="home.php" method="POST">
                 <h1><?php echo $lang['Login']; ?></h1>
                 
                 <label><b>Email</b></label>
@@ -72,10 +73,16 @@ if ($_POST) {
                 <label><b><?php echo $lang['mdp']; ?></b></label>
                 <input type="password" placeholder="Entrer le mot de passe" name="password" required>
 
-                <input type="submit" name="Btncx"  value='Connexion' >
+                <input type="submit" name="Btncx"  value='Connexion'>
                 
-            </form>
+                </form>
         </div>
+    </div>
+            <div class="right_columm">
+            </div>   
+</div>
+</div>
+        
    
    
     
