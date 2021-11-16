@@ -1,6 +1,6 @@
 <?php
 
-include 'php/config.php';
+include 'config/config.php';
 
 if (isset($_POST['lang']) && !empty($_POST['lang'])) {
     if (file_exists('lang/' . $_POST['lang'] . '.php'))
@@ -59,8 +59,9 @@ if ($_POST) {
         <h1><?php echo $lang['title']; ?></h1>
     </div>
 
-    
+
     <div id="container">
+<<<<<<< HEAD
            
             
             <form id="login" action="verification.php" method="POST">
@@ -90,6 +91,34 @@ if ($_POST) {
    
     
     
+=======
+
+
+        <form id="login" action="php/home.php" method="POST">
+            <div id="headerform">
+                <p><?php echo $lang['Login']; ?></p>
+                <img src="img/logo.png" alt="logo">
+
+
+            </div>
+
+            <label><b>Identifiant</b></label>
+            <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+
+            <label><b><?php echo $lang['mdp']; ?></b></label>
+            <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+
+            <input type="submit" name="Btncx" value='Connexion'>
+
+        </form>
+        <footer class="footer">
+            <h2 class="CGU">conditions générales d'utilisation</h2>
+        </footer>
+    </div>
+
+
+
+>>>>>>> 637139c1d8ea5b95550fc861094ba7928f08e82b
 </body>
 
 
