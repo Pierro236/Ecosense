@@ -34,7 +34,6 @@ background: url("../img/logo.jpg");
   border: 1px solid #f1f1f1;
   background: rgb(188, 241, 188, 0.4);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  
 }
 
 input[type=text], input[type=password] {
@@ -84,14 +83,14 @@ h1{
   padding-left: 45px;
 }
 .footer{
-  background-color:  rgba(91, 166, 237, 0.7); ;
-  position: top;
+  background-color:  rgba(91, 166, 237, 0.7); 
+  float: bottom;
   width: 100%;
   padding-top: 25px;
   height: 50px;
 }
 
 .CGU{
-  float: right;
+  float: left;
   padding-bottom: 12px;
 }

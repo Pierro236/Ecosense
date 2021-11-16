@@ -80,10 +80,10 @@ if ($_POST) {
                 <input type="submit" name="Btncx"  value='Connexion' >
                 
             </form>
-        </div>
-    <footer class="footer">
-        <h2 class="CGU">conditions générales d'utilisation</h2>
-    </footer>
+            <footer class="footer">
+             <h2 class="CGU">conditions générales d'utilisation</h2>
+            </footer>
+    </div>
    
    
     
