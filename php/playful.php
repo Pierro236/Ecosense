@@ -33,11 +33,9 @@ if ($_GET) {
 <head>
     <meta charset="utf-8" />
     <title>EcoSense | Accueil</title>
-    <link rel="stylesheet" href="../css/home.css" />
-    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/playful.css" />
     <link rel="icon" type="image/jpg" href="" />
-
-
+    <link rel="stylesheet" href="../css/navbar.css" />
 </head>
 
 <body>
@@ -53,12 +51,7 @@ if ($_GET) {
 
 
     <div class="wrap">
-        <div class="search">
-            <input type="text" class="searchTerm" placeholder="Recherchez une salle">
-            <button type="submit" class="searchButton">
-                <i class="fa fa-search"></i>
-            </button>
-        </div>
+
     </div>
 
     <form method="GET" action="">

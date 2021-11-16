@@ -2,9 +2,9 @@
 
 include 'config/config.php';
 
-if (isset($_POST['lang']) && !empty($_POST['lang'])) {
-    if (file_exists('lang/' . $_POST['lang'] . '.php'))
-        require_once('lang/' . htmlentities($_POST['lang']) . '.php');
+if (isset($_GET['lang']) && !empty($_GET['lang'])) {
+    if (file_exists('lang/' . $_GET['lang'] . '.php'))
+        require_once('lang/' . htmlentities($_GET['lang']) . '.php');
     else
         require_once('lang/fr.php');
 } /*else if (file_exists('lang/' . $_SERVEUR['HTTP_ACCEPT_LANGUAGE'] . '.php')) {
@@ -13,8 +13,8 @@ if (isset($_POST['lang']) && !empty($_POST['lang'])) {
     require_once('lang/fr.php');
 }
 
-if ($_POST) {
-    $_POST['lang'] = $_POST['lang'];
+if ($_GET) {
+    $_GET['lang'] = $_GET['lang'];
 
 
     /*if (!empty($num) and !empty($destination)) {
@@ -31,14 +31,6 @@ if ($_POST) {
 <html>
 
 <head>
-    <?php /*if ($_GET['lang'] == 'fr') {
-        echo '<link href="css/style_main.css" rel="stylesheet" type="text/css" media="screen">';
-    } elseif ($_GET['lang'] == 'en') {
-        echo '<link href="css/style_main.css" rel="stylesheet" type="text/css" media="screen">';
-    } elseif ($_GET['lang'] == 'de') {
-        echo '<link href="css/style_main.css" rel="stylesheet" type="text/css" media="screen">';
-    } else echo '<link href="css/style_main.css" rel="stylesheet" type="text/css" media="screen">';
-    */ ?>
     <meta charset="utf-8" />
     <title>EcoSense | Accueil</title>
     <link rel="stylesheet" href="css/style_main.css" />
@@ -48,7 +40,7 @@ if ($_POST) {
 <body>
 
     <div>
-        <form method="POST" action="">
+        <form method="GET" action="">
             <select id="lang" name="lang">
                 <option value="fr">Francais</option>
                 <option value="en">English</option>
@@ -81,7 +73,7 @@ if ($_POST) {
 
         </form>
         <footer class="footer">
-            <h2 class="CGU">conditions générales d'utilisation</h2>
+            <h2 class="CGU">Conditions générales d'utilisation</h2>
         </footer>
     </div>
 
