@@ -64,7 +64,7 @@ if ($_POST) {
         <div class="container">
            
             
-                <form id="login" action="home.php" method="POST">
+                <form id="login" action="php/home.php" method="POST">
                 <h1><?php echo $lang['Login']; ?></h1>
                 
                 <label><b>Email</b></label>
