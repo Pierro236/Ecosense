@@ -63,7 +63,7 @@ if ($_POST) {
     <div id="container">
            
             
-            <form id="login" action="verification.php" method="POST">
+            <form id="login" action="php/home.php" method="POST">
                 <div id="headerform">
                     <p><?php echo $lang['Login']; ?></p>
                     <img src="img/logo.png" alt="logo">
