@@ -34,8 +34,8 @@ if ($_GET) {
     <meta charset="utf-8" />
     <title>EcoSense | Accueil</title>
     <link rel="stylesheet" href="../css/playful.css" />
-    <link rel="icon" type="image/jpg" href="" />
     <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="icon" type="image/jpg" href="" />
 </head>
 
 <body>

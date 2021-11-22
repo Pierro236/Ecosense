@@ -36,6 +36,8 @@ if ($_GET) {
     <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
     <link rel="icon" type="image/jpg" href="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
 
 
 </head>
@@ -69,10 +71,31 @@ if ($_GET) {
         <input type="submit" value="Envoyer">
     </form>
 
-    <footer>
-
-    </footer>
-
 </body>
+<div class="footer">
+  <div class="contain">
+  
+  <div class="col">
+    <h1>FAQ</h1>
+    
+  </div>
+  <div class="col">
+    <h1>CGU</h1>
+    
+  </div>
+  <div class="col">
+    <h1>mentions légales</h1>
+    
+  </div>
+  <div class="col">
+    <h1>contact@ecosense.com</h1>
+    
+  </div>
+
+<div class = "diagonal"></div>  
+<div class = "diagonal"></div>
+<div class="clearfix"></div>
+</div>
+</div>
 
 </html>
