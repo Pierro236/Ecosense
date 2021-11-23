@@ -47,9 +47,9 @@ if ($_GET) {
 
     <div class="navbar">
         <img src="../img/logo.png" alt="logo" />
-        <a class="ES"> EcoSense</a>
-        <a class="home">Accueil</a>
-        <a class="name">Nom</a>
+        <a class="ES" > EcoSense</a>
+        <a class="home" href = "home.php">Accueil</a>
+        <a class="name" href= "profile.php">Nom</a>
 
     </div>
 
@@ -72,6 +72,7 @@ if ($_GET) {
     </form>
 
 </body>
+
 <div class="footer">
   <div class="contain">
   
@@ -92,10 +93,9 @@ if ($_GET) {
     
   </div>
 
-<div class = "diagonal"></div>  
-<div class = "diagonal"></div>
-<div class="clearfix"></div>
+
 </div>
 </div>
+
 
 </html>

@@ -41,15 +41,21 @@ body {
 }
 
 
+body {
 
+  margin:0;
+  padding:0;
+  height:100%;
+}
 
 /* debut footer*/
 .footer {
   width: 100%;
-  position:absolute;
+  position: absolute;
   height: auto;
   background-color: #070617;
-  bottom : 0;
+  bottom: 0;
+ 
 }
 .footer .col {
   width: 190px;
@@ -89,13 +95,7 @@ body {
   font-weight:bolder;
 }
 
-.diagonal {
-  width: 112px;
-  height: 47px;
-  border-bottom: 1px solid red;
-  
-  position: absolute;
-}
+
 
 
 /* fin footer*/

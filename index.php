@@ -51,7 +51,7 @@ if ($_GET) {
         <h1><?php echo $lang['title']; ?></h1>
     </div>
 
-
+    
     <div id="container">
 
 
@@ -74,15 +74,35 @@ if ($_GET) {
         </form>
 
     </div>
-    <div>
-        <footer>
-            <h2 class="CGU">conditions générales d'utilisation</h2>
-        </footer>
-    </div>
+    
+
+    <div class="footer">
+  <div class="contain">
+  
+  <div class="col">
+    <h1>FAQ</h1>
+    
+  </div>
+  <div class="col">
+    <h1>CGU</h1>
+    
+  </div>
+  <div class="col">
+    <h1>mentions légales</h1>
+    
+  </div>
+  <div class="col">
+    <h1>contact@ecosense.com</h1>
+    
+  </div>
 
 
+</div>
+</div>
 
 </body>
+
+
 
 
 
