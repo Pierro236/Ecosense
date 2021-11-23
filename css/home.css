@@ -51,10 +51,10 @@ body {
 /* debut footer*/
 .footer {
   width: 100%;
-  position: absolute;
+  display: flex;
   height: auto;
   background-color: #070617;
-  bottom: 0;
+  flex: 1.2;
  
 }
 .footer .col {
