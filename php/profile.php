@@ -110,7 +110,7 @@ if ($_GET) {
 </h1>
     <div class="cardio">
         <h2 style="text-align:center"> Rythme cardiaque </h2>
-        <img class="heart" src="../img/ecoheart.png" alt="heart"/>
+        <img class="heart" src="../img/heart.png" alt="heart"/>
 
         <h2 style="font-size:50px;">&nbsp;  126 </h2>
     

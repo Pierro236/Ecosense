@@ -1,5 +1,10 @@
 body {
-  background-color: rgba(241, 238, 233);
+  background: url("../img/Office.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
  }
  
  .bvn{
@@ -46,3 +51,4 @@ body {
   display: flex;
   padding-top: 10%;
 }
+
