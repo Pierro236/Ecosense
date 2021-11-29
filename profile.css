@@ -45,7 +45,7 @@ body {
 }
   
 .graph1{
-  position:fixed;
+  position:relative;
   width:40%;
   float:left;
   top:150px;
