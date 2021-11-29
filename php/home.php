@@ -37,6 +37,7 @@ if ($_GET) {
     <link rel="stylesheet" href="../css/navbar.css" />
     <link rel="icon" type="image/jpg" href="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/footer.css" />
 
 
 

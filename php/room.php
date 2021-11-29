@@ -62,6 +62,33 @@ if ($_GET) {
         <input type="submit" value="Envoyer">
     </form>
 
+    <h1 class="bvn">
+        Bienvenue dans la salle 1
+    </h1>
+    
+    <div class="score">
+        <div class="titre">
+            Score de la salle   
+        </div>       
+    </div>
+
+    <div class="align">
+        <div class="sound">
+            <div class="titre">
+                Niveau sonore
+            </div> 
+        </div>
+
+        <div class="cod">
+            <div class="titre">
+                Taux de CO2
+            </div>
+            
+        </div>
+    </div>
+
+
+
     <footer>
 
     </footer>
