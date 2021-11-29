@@ -57,9 +57,7 @@ if ($_GET) {
     <div class="wrap">
         <div class="search">
             <input type="text" class="searchTerm" placeholder="Recherchez une salle">
-            <button type="submit" class="searchButton">
-                <i class="fa fa-search"></i>
-            </button>
+            <a class="searchButton" href="room.php"><img class ="photo" src="../img/loupe.png"/></a>
         </div>
     </div>
 
@@ -71,31 +69,30 @@ if ($_GET) {
         <input type="submit" value="Envoyer">
     </form>
 
+    <div class="footer">
+         <div class="contain">
+  
+        <div class="col">
+         <h1>FAQ</h1>
+    
+         </div>
+        <div class="col">
+         <h1>CGU</h1>
+    
+        </div>
+        <div class="col">
+        <h1>mentions légales</h1>
+    
+        </div>
+        <div class="col">
+        <h1>contact@ecosense.com</h1>
+    
+     </div>
+
+
 </body>
 
-<div class="footer">
-  <div class="contain">
-  
-  <div class="col">
-    <h1>FAQ</h1>
-    
-  </div>
-  <div class="col">
-    <h1>CGU</h1>
-    
-  </div>
-  <div class="col">
-    <h1>mentions légales</h1>
-    
-  </div>
-  <div class="col">
-    <h1>contact@ecosense.com</h1>
-    
-  </div>
 
-
-</div>
-</div>
 
 
 </html>

@@ -30,6 +30,10 @@ body {
   border-bottom-right-radius: 20px;
   background-color: white;
   border-style: none;
+  text-decoration: none;
+  width: 50px;
+  height: 30px;
+
 }
 
 .wrap {
@@ -56,6 +60,8 @@ body {
   height: auto;
   background-color: #070617;
   flex: 1.2;
+  position: absolute;
+  bottom: 0;
  
 }
 .footer .col {
@@ -89,15 +95,17 @@ body {
   
   
 .footer .col  :hover{
-  color: #ffff;
+  color:#ffff;
   transition: .1s;
   -webkit-transition: .1s;
   -moz-transition: .1s;
   font-weight:bolder;
 }
 
-
-
+.photo{
+  height: 30px;
+  width: 30px  ;
+}
 
 /* fin footer*/
   
