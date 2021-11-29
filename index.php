@@ -35,7 +35,7 @@ if ($_GET) {
     <title>EcoSense | Accueil</title>
     <link rel="stylesheet" href="css/style_main.css" />
     <link rel="icon" type="image/jpg" href="" />
-    <link rel="stylesheet" href="../css/navbar.css" />
+    
 </head>
 
 <body>
