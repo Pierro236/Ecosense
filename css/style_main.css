@@ -21,7 +21,7 @@ body {
   background: url("../img/logo.jpg");
 }
 #container {
-  float: left;
+  float: center;
   width: 40%;
   margin: 0 auto;
   margin-top: 10%;
@@ -75,6 +75,7 @@ h1 {
   font-size: 250%;
 }
 #headerform {
+  
   display: flex;
   flex-direction: row;
 }
@@ -84,4 +85,13 @@ h1 {
   padding-left: 45px;
 }
 
+.name{
+  color: black;
+  font-size:200%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.logo{
+  float: right;
+}
 

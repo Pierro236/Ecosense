@@ -48,8 +48,6 @@ if ($_GET) {
             </select>
             <input type="submit" value="Envoyer">
         </form>
-
-        <h1><?php echo $lang['title']; ?></h1>
     </div>
 
     
@@ -58,8 +56,8 @@ if ($_GET) {
 
         <form id="login" action="php/home.php" method="POST">
             <div id="headerform">
-                <p><?php echo $lang['Login']; ?></p>
-                <img src="img/logo.png" alt="logo">
+                <p class="name"><?php echo $lang['Login']; ?></p>
+                <img src="img/logo.png" alt="logo" class ="logo">
 
 
             </div>
