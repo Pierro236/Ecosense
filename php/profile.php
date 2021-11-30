@@ -91,7 +91,7 @@ if ($_GET) {
             <img src="../img/logo.png" alt="logo" />
         </div>
          <a class="ES"> EcoSense</a>
-        <a class="home">Accueil</a>
+        <a class="home" href = "home.php">Accueil</a>
         <a class="name">Nom</a>
 
     </div>

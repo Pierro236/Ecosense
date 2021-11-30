@@ -57,6 +57,7 @@ if ($_GET) {
         <input type="submit" value="Envoyer">
     </form>
 
+<<<<<<< HEAD
     <div class="contenu">
 
         <div class="paragraphe">
@@ -79,8 +80,41 @@ if ($_GET) {
     </div>
 
     <footer>
+=======
+>>>>>>> 3e7bec101607edd73a90a6f4e4b0c5f270f673da
 
-    </footer>
+    
+    <div class="cardio">
+        <h2 style="text-align:center"> Rythme cardiaque </h2>
+        <img class="heart" src="../img/heart.png" alt="heart"/>
+
+        <h2 style="font-size:50px;">&nbsp;  126 </h2>
+    
+        <div class="bpm"> BPM </div>
+    </div> 
+    
+    
+    <div class="footer">
+         <div class="contain">
+  
+        <div class="col">
+         <h1>FAQ</h1>
+    
+         </div>
+        <div class="col">
+         <h1>CGU</h1>
+    
+        </div>
+        <div class="col">
+        <h1>mentions légales</h1>
+    
+        </div>
+        <div class="col">
+        <h1>contact@ecosense.com</h1>
+    
+     </div>
+
+    
 
 
 

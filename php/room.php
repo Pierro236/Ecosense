@@ -44,8 +44,8 @@ if ($_GET) {
     <div class="navbar">
         <img src="../img/logo.png" alt="logo" />
         <a class="ES"> EcoSense</a>
-        <a class="home">Accueil</a>
-        <a class="name">Nom</a>
+        <a class="home" href = "home.php">Accueil</a>
+        <a class="name" href = "profile.php">Nom</a>
 
     </div>
 

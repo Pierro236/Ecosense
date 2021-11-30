@@ -36,8 +36,9 @@ if ($_GET) {
     <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
     <link rel="icon" type="image/jpg" href="" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
 
 
 </head>
@@ -47,9 +48,9 @@ if ($_GET) {
 
     <div class="navbar">
         <img src="../img/logo.png" alt="logo" />
-        <a class="ES" > EcoSense</a>
-        <a class="home" href = "home.php">Accueil</a>
-        <a class="name" href= "profile.php">Nom</a>
+        <a class="ES" href="home.php"> <img src="../img/heart.png" width="10%" /></a>
+        <a class="home" href="home.php">Accueil</a>
+        <a class="name" href="profile.php">Mon profile</a>
 
     </div>
 
@@ -57,7 +58,7 @@ if ($_GET) {
     <div class="wrap">
         <div class="search">
             <input type="text" class="searchTerm" placeholder="Recherchez une salle">
-            <a class="searchButton" href="room.php"><img class ="photo" src="../img/loupe.png"/></a>
+            <a class="searchButton" href="room.php"><img class="photo" src="../img/loupe.png" /></a>
         </div>
     </div>
 
@@ -70,28 +71,29 @@ if ($_GET) {
     </form>
 
     <div class="footer">
-         <div class="contain">
-  
-        <div class="col">
-         <h1>FAQ</h1>
-    
-         </div>
-        <div class="col">
-         <h1>CGU</h1>
-    
-        </div>
-        <div class="col">
-        <h1>mentions légales</h1>
-    
-        </div>
-        <div class="col">
-        <h1>contact@ecosense.com</h1>
-    
-     </div>
+        <div class="contain">
+
+            <div class="col">
+                <h1>FAQ</h1>
+
+            </div>
+            <div class="col">
+                <h1>CGU</h1>
+
+            </div>
+            <div class="col">
+                <h1>mentions légales</h1>
+
+            </div>
+            <div class="col">
+                <h1>contact@ecosense.com</h1>
+
+            </div>
 
 
+        </div>
+    </div>
 </body>
-
 
 
 
