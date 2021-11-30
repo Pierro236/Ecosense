@@ -5,7 +5,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font-family: "Open Sans", sans-serif;
-<<<<<<< HEAD
+
 
 }
 
@@ -14,8 +14,6 @@ body {
   background-color: rgb(188, 241, 188, 0.4);
   width: 50%;
   color: aliceblue;
-  
-=======
   margin:0;
   padding:0;
   height:100%;
@@ -28,8 +26,7 @@ body {
   height: auto;
   background-color: #070617;
   flex: 1.2;
-  position: absolute;
-  bottom: 0;
+ 
   
 }
 .footer .col {
@@ -75,11 +72,12 @@ body {
 .cardio {
   width: 30%;
   float:right;
-  background-color: pink;
+  background-color: rgb(188, 241, 188, 0.4);
   border-radius: 30px;
   height: 30%;
-  margin-top: 70px;
+  
   margin-right: 70px;
+  margin-bottom: 70px;
 }
 
 .heart{
@@ -93,5 +91,5 @@ body {
   position:relative;
   left: 60px;
   bottom: 40px;
->>>>>>> 3e7bec101607edd73a90a6f4e4b0c5f270f673da
+
 }

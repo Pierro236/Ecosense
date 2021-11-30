@@ -80,8 +80,6 @@ if ($_GET) {
     </div>
 
     <footer>
-=======
->>>>>>> 3e7bec101607edd73a90a6f4e4b0c5f270f673da
 
     
     <div class="cardio">
@@ -113,6 +111,7 @@ if ($_GET) {
         <h1>contact@ecosense.com</h1>
     
      </div>
+</div>
 
     
 
