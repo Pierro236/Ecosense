@@ -49,11 +49,6 @@ if ($_GET) {
 
     </div>
 
-
-    <div class="wrap">
-
-    </div>
-
     <form method="GET" action="">
         <select id="lang" name="lang">
             <option value="fr">Francais</option>
@@ -62,9 +57,32 @@ if ($_GET) {
         <input type="submit" value="Envoyer">
     </form>
 
+    <div class="contenu">
+
+        <div class="paragraphe">
+            <h1>Exercice du jour</h1>
+            <p>
+                <ul>Commencez par respirer lentement.</ul>
+                <ul>Inspirez profondement 5 secondes.</ul>
+                <ul>Retenez votre respiration 10 secondes.</ul>
+                <ul>Expirez pendant 5 ou 6 secondes.</ul>
+                <ul>Répétez l'operation jusqu'à ce que vous vous sentiez détendu et que votre BPM passe en dessous de 75</ul>
+            </p>
+
+         </div>
+
+          <div>
+
+         </div>
+
+
+    </div>
+
     <footer>
 
     </footer>
+
+
 
 </body>
 

@@ -5,4 +5,13 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font-family: "Open Sans", sans-serif;
+
+}
+
+.paragraphe{
+
+  background-color: rgb(188, 241, 188, 0.4);
+  width: 50%;
+  color: aliceblue;
+  
 }
