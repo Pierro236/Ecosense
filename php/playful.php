@@ -57,11 +57,13 @@ if ($_GET) {
         <input type="submit" value="Envoyer">
     </form>
 
-<<<<<<< HEAD
     <div class="contenu">
 
         <div class="paragraphe">
+        <div class='titre'>
             <h1>Exercice du jour</h1>
+
+        </div>   
             <p>
                 <ul>Commencez par respirer lentement.</ul>
                 <ul>Inspirez profondement 5 secondes.</ul>
@@ -69,27 +71,30 @@ if ($_GET) {
                 <ul>Expirez pendant 5 ou 6 secondes.</ul>
                 <ul>Répétez l'operation jusqu'à ce que vous vous sentiez détendu et que votre BPM passe en dessous de 75</ul>
             </p>
+        </div>
 
-         </div>
+        <div class="cardio">
+            <h2 style="text-align:center"> Rythme cardiaque </h2>
+             <img class="heart" src="../img/heart.png" alt="heart"/>
 
-          <div>
+             <h2 style="font-size:50px;">&nbsp;  126 </h2>
+    
+            <div class="bpm"> BPM </div>
+        </div> 
 
-         </div>
+
 
 
     </div>
 
-    <footer>
+    <div class = "video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jVij0mLmMGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+    </div>
+
 
     
-    <div class="cardio">
-        <h2 style="text-align:center"> Rythme cardiaque </h2>
-        <img class="heart" src="../img/heart.png" alt="heart"/>
 
-        <h2 style="font-size:50px;">&nbsp;  126 </h2>
-    
-        <div class="bpm"> BPM </div>
-    </div> 
+
     
     
     <div class="footer">
