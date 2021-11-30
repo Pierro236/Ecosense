@@ -5,7 +5,6 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font-family: "Open Sans", sans-serif;
-<<<<<<< HEAD
 
 }
 
@@ -14,11 +13,9 @@ body {
   background-color: rgb(188, 241, 188, 0.4);
   width: 50%;
   color: aliceblue;
-  
-=======
-  margin:0;
-  padding:0;
   height:100%;
+  border-radius: 30px;
+  margin-top: 100px;
 }
 
 /* debut footer*/
@@ -78,8 +75,8 @@ body {
   background-color: pink;
   border-radius: 30px;
   height: 30%;
-  margin-top: 70px;
-  margin-right: 70px;
+  margin-left: 100px;
+  margin-top: 130px;
 }
 
 .heart{
@@ -93,5 +90,14 @@ body {
   position:relative;
   left: 60px;
   bottom: 40px;
->>>>>>> 3e7bec101607edd73a90a6f4e4b0c5f270f673da
+}
+
+.contenu{
+  display: flex;
+  flex-direction: raw;
+  justify-content: center;
+}
+
+.titre{
+text-align: center;
 }
