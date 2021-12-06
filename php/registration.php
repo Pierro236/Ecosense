@@ -50,6 +50,16 @@ if ($_GET) {
     </div>
 
 
+
+
+    <form method="GET" action="">
+        <select id="lang" name="lang">
+            <option value="fr">Francais</option>
+            <option value="en">English</option>
+        </select>
+        <input type="submit" value="Envoyer">
+    </form>
+
     <div id="container">
 
 
@@ -72,19 +82,6 @@ if ($_GET) {
         </form>
 
     </div>
-
-    <form method="GET" action="">
-        <select id="lang" name="lang">
-            <option value="fr">Francais</option>
-            <option value="en">English</option>
-        </select>
-        <input type="submit" value="Envoyer">
-    </form>
-
-    <div>
-        <h1>Inscription</h1>
-    </div>
-
     <footer>
 
     </footer>
