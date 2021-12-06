@@ -50,7 +50,26 @@ if ($_GET) {
     </div>
 
 
-    <div class="wrap">
+    <div id="container">
+
+
+        <form id="login" action="php/home.php" method="POST">
+            <div id="headerform">
+                <p class="name"><?php echo $lang['Login']; ?></p>
+                <img src="img/logo.png" alt="logo" class="logo">
+
+
+            </div>
+
+            <label><b>Identifiant</b></label>
+            <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+
+            <label><b><?php echo $lang['mdp']; ?></b></label>
+            <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+
+            <input type="submit" name="Btncx" value='Connexion'>
+
+        </form>
 
     </div>
 
@@ -63,7 +82,7 @@ if ($_GET) {
     </form>
 
     <div>
-    <h1>Inscription</h1>
+        <h1>Inscription</h1>
     </div>
 
     <footer>
