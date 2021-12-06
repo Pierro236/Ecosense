@@ -87,7 +87,14 @@ if ($_GET) {
 
     </div>
 
-    <footer>
+    <div class = "video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jVij0mLmMGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
+    </div>
+
+
+    
+
+
     
     
     <div class="footer">
@@ -109,6 +116,7 @@ if ($_GET) {
         <h1>contact@ecosense.com</h1>
     
      </div>
+</div>
 
     
 
