@@ -1,0 +1,74 @@
+body {
+  background-color:rgb(241, 238, 233);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+
+
+.cardio {
+  width: 20%;
+  float:left;
+  background-color: white;
+  border-radius: 30px;
+  height: 200px;
+
+}
+
+.heart{
+  float:right;
+  width: 100px;
+  height: 100px;
+
+}
+
+.bpm{
+  position:relative;
+  left: 60px;
+  bottom: 40px;
+  margin-top: 10px;
+}
+
+.cons{
+  width: 50%;
+  float:right;
+  background-color:white;
+  border-radius: 30px;
+  height: 400px;
+  
+}
+  
+.graph1{
+
+ 
+
+ /* position:relative;
+
+  width:40%;*/
+  float:left;
+  /*top:150px;
+  background-color:white;
+  height: 400px;*/
+}
+
+.graph2{
+  /*position:relative;
+  width:40%;*/
+  float:right;
+  /*top:150px;
+  background-color:white;
+  height: 400px;*/
+
+}
+
+
+.aff{position: relative;
+bottom: 16px;
+}
+
+
+
