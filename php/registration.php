@@ -50,9 +50,7 @@ if ($_GET) {
     </div>
 
 
-    <div class="wrap">
 
-    </div>
 
     <form method="GET" action="">
         <select id="lang" name="lang">
@@ -62,10 +60,29 @@ if ($_GET) {
         <input type="submit" value="Envoyer">
     </form>
 
-    <div>
-    <h1>Inscription</h1>
-    </div>
+    <div id="container">
 
+
+        <form id="registration" action="php/home.php" method="POST">
+            <div id="headerform">
+                <p class="name"><?php echo $lang['Login']; ?></p>
+                <img src="../img/logo.png" alt="logo" class="logo">
+
+
+            </div>
+
+            <label><b>Nom</b></label>
+            <input type="text" placeholder="Entrer le Prénom de l'utilisateur" name="prenom" required>
+            <label><b>Prénom</b></label>
+            <input type="text" placeholder="Entrer le nom d'utilisateur" name="nomdefamille" required>
+            <label><b>Adresse mail</b></label>
+            <input type="text" placeholder="Entrer l'adresse mail du nouvel utilisateur" name="mailaddress" required>
+
+            <input type="submit" name="Btncx" value='Générer un compte'>
+
+        </form>
+
+    </div>
     <footer>
 
     </footer>

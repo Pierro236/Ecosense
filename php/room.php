@@ -69,7 +69,8 @@ if ($_GET) {
     <div class="score">
         <div class="titre">
             Score de la salle   
-        </div>       
+        </div> 
+        <img class="score1" src="../img/score.png" alt="">      
     </div>
 
     <div class="align">
@@ -77,12 +78,14 @@ if ($_GET) {
             <div class="titre">
                 Niveau sonore
             </div> 
+            <img class="sound1" src="../img/sound.png" alt="">
         </div>
 
         <div class="cod">
             <div class="titre">
                 Taux de CO2
             </div>
+            <img class="cod2" src="../img/co2.png" alt="">
             
         </div>
     </div>

@@ -71,7 +71,7 @@ if ($_GET) {
   transition: 0.5s;
   }
   button:hover {
-  background-color: #77C3DC;
+  background-color: #FFFFFF;
   }
   button:hover span {
   padding-right: 25px;
@@ -91,8 +91,8 @@ if ($_GET) {
             <img src="../img/logo.png" alt="logo" />
         </div>
          <a class="ES"> EcoSense</a>
-        <a class="home" href = "home.php">Accueil</a>
-        <a class="name">Nom</a>
+        <a  href="home.php" class="home">Accueil</a>
+        <a  href="profile.php" class="name">Nom</a>
 
     </div>
 
@@ -112,9 +112,8 @@ if ($_GET) {
         <h2 style="text-align:center"> Rythme cardiaque </h2>
         <img class="heart" src="../img/heart.png" alt="heart"/>
 
-        <h2 style="font-size:50px;">&nbsp;  126 </h2>
+        <div class="rtm"> 122 <div class="bpm"> BPM </div> </div>
     
-        <div class="bpm"> BPM </div>
     </div> 
     <div class="cons"> <h2 style="text-align:left">&nbsp; Ceci est un bloc dont j'ignore l'utilité <br>
     &nbsp; Je le remplis de phrase pour jauger la taille <br>&nbsp; Blablablablablabalbla</h2> </div>
@@ -123,9 +122,9 @@ if ($_GET) {
     <br><br><br><br><br><br><br><br><br><br><br><br><br>Mes Statistiques 
     </h1>
 
-    <div class="graph1"> <br>&nbsp;&nbsp;Graphe 1  </div>
+    <div class="graph1"> <img  class="g1" src="../img/graph1.png" alt="graph1" ></div>
 
-    <div class="graph2"> <br>&nbsp;&nbsp;Graphe 2 </div>
+    <div class="graph2"> <img  class="g2" src="../img/graph2.png" alt="graph2" > </div>
 
     
     
