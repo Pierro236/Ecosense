@@ -63,21 +63,22 @@ if ($_GET) {
     <div id="container">
 
 
-        <form id="login" action="php/home.php" method="POST">
+        <form id="registration" action="php/home.php" method="POST">
             <div id="headerform">
                 <p class="name"><?php echo $lang['Login']; ?></p>
-                <img src="img/logo.png" alt="logo" class="logo">
+                <img src="../img/logo.png" alt="logo" class="logo">
 
 
             </div>
 
-            <label><b>Identifiant</b></label>
-            <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+            <label><b>Nom</b></label>
+            <input type="text" placeholder="Entrer le Prénom de l'utilisateur" name="prenom" required>
+            <label><b>Prénom</b></label>
+            <input type="text" placeholder="Entrer le nom d'utilisateur" name="nomdefamille" required>
+            <label><b>Adresse mail</b></label>
+            <input type="text" placeholder="Entrer l'adresse mail du nouvel utilisateur" name="mailaddress" required>
 
-            <label><b><?php echo $lang['mdp']; ?></b></label>
-            <input type="password" placeholder="Entrer le mot de passe" name="password" required>
-
-            <input type="submit" name="Btncx" value='Connexion'>
+            <input type="submit" name="Btncx" value='Générer un compte'>
 
         </form>
 
