@@ -48,7 +48,7 @@ if ($_GET) {
 
     <div class="navbar">
         <img   class="ilog" src="../img/logo.png" alt="logo" />
-        <a class="ES" href="home.php"> <img src="../img/heart.png" width="10%" /></a>
+       <a href="home.php"> <img  class="ht"src="../img/heart.png" width="10%" /></a>
         <a class="home" href="home.php">Accueil</a>
         <a class="name" href="profile.php">Mon profil</a>
 
