@@ -63,7 +63,7 @@ if ($_GET) {
     <div id="container">
 
 
-        <form id="registration" action="../php/home.php" method="POST">
+        <form id="registration" action="" method="POST">
             <div id="headerform">
                 <p class="name"><?php echo $lang['Login']; ?></p>
                 <img src="../img/logo.png" alt="logo" class="logo">
@@ -72,16 +72,56 @@ if ($_GET) {
             </div>
 
             <label><b>Nom</b></label>
-            <input type="text" placeholder="Nom du nouvel utilisateur" name="sirname" required>
+            <input type="text" placeholder="Nom du nouvel utilisateur" name="surname" id="surname"required>
             <label><b>Prénom</b></label>
-            <input type="text" placeholder="Prénom du nouvel utilisateur" name="name" required>
+            <input type="text" placeholder="Prénom du nouvel utilisateur" name="name" id="name" required>
             <label><b>Adresse mail</b></label>
-            <input type="text" placeholder="Adresse mail du nouvel utilisateur" name="mailaddress" required>
+            <input type="text" placeholder="Adresse mail du nouvel utilisateur" name="email" id="email"required>
 
-            <input type="submit" name="Btncx" value='Générer un compte'>
-
+            <input type="submit" name="Btncx" onclick="creatpassword" value='Générer un compte' id="password">
+        
+            <script>
+            function creatpassword($nbChar)
+	{
+		return substr(str_shuffle(
+			'abcdefghijklmnopqrstuvwxyzABCEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+		), 1, $nbChar);
+	}
+            </script>
         </form>
+        
+        <?php
+        
 
+        extract($_POST);
+
+        $options = [
+            'cost' => 12,
+        ];
+        $hash_pass = password_hash($password, PASSWORD_BCRYPT, $options);
+        
+        include '../config/config.php';
+        global $db;
+
+
+        //$c = $db->prepare("SELECT email FROM users WHERE email = :email")
+        //$c->execute(['email' => $email]);
+        //$result = $c->rowCount();
+
+        //if($result == 0){
+            $q = $db->prepare(" INSERT INTO  users(surname,name,email,password) VALUES(:surname, :name, :email, :password)");
+            $q->execute([
+                'surname' => $surname,
+                'name' => $name,
+                'email' => $email,
+                'password' => $hash_pass
+                    ]);
+                   // echo "Le compte a bien été créé.";
+            //}else{
+            //   echo "Cet Email est déjà utilisé !";
+            //    }
+        
+        ?>
     </div>
     <footer>
 
