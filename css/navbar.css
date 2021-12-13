@@ -33,10 +33,19 @@
   float: left;
   width: 70px;
   height: 70px;
+  padding-bottom: 20px;
 }
 
 
 .ilog {
   position:relative;
-  bottom: 5px;
+  bottom: 10px;
 }
+
+
+
+
+
+
+
+

@@ -50,7 +50,7 @@ if ($_GET) {
         <img src="../img/logo.png" alt="logo" />
         <a class="ES" href="home.php"> <img src="../img/heart.png" width="10%" /></a>
         <a class="home" href="home.php">Accueil</a>
-        <a class="name" href="profile.php">Mon profile</a>
+        <a class="name" href="profile.php">Mon profil</a>
 
     </div>
 

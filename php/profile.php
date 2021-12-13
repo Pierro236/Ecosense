@@ -91,7 +91,8 @@ if ($_GET) {
         <div class="ilog"> 
             <img src="../img/logo.png" alt="logo" />
         </div>
-         <a class="ES"> EcoSense</a>
+
+        <a class="ES"> EcoSense</a>
         <a  href="home.php" class="home">Accueil</a>
         <a  href="profile.php" class="name">Nom</a>
 
@@ -124,7 +125,7 @@ if ($_GET) {
     <div class="cons"> <h2 style="text-align:left">&nbsp; Votre fréquence cardiaque est plutot élevée <br>
     &nbsp; Vous pouvez accédez à vos statisques <br>&nbsp; ainsi qu'à l'espace détente plus bas...</h2> </div>
 
-    <h1 style="text-align:center;" >
+    <h1 class="stat" >
     <br><br><br><br><br><br><br><br><br><br><br><br><br>Mes Statistiques 
     </h1>
 
@@ -138,11 +139,6 @@ if ($_GET) {
     <span>Relaxez-vous<br></span>
     </button> 
     </a>
-
-    
-
-    
-
 
 </body>
 

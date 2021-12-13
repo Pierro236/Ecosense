@@ -65,29 +65,32 @@ if ($_GET) {
     <h1 class="bvn">
         Bienvenue dans la salle 1
     </h1>
-    
-    <div class="score">
-        <div class="titre">
-            Score de la salle   
-        </div> 
-        <img class="score1" src="../img/score.png" alt="">      
-    </div>
 
-    <div class="align">
-        <div class="sound">
+
+    <div class="content"> 
+         <div class="score">
             <div class="titre">
-                Niveau sonore
+            Score de la salle   
             </div> 
-            <img class="sound1" src="../img/sound.png" alt="">
-        </div>
+          <img class="score1" src="../img/diagramme-circulaire.png" alt="">      
+         </div>
+
+         <div class="align">
+              <div class="sound">
+                  <div class="titre">
+                Niveau sonore
+              </div> 
+            <img class="sound1" src="../img/les-ondes-sonores.png" alt="">
+         </div>
 
         <div class="cod">
             <div class="titre">
                 Taux de CO2
             </div>
-            <img class="cod2" src="../img/co2.png" alt="">
+            <img class="cod2" src="../img/qualite-de-lair.png" alt="">
             
         </div>
+    
     </div>
 
 
