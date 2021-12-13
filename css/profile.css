@@ -1,5 +1,5 @@
 body {
-  background-color:rgb(241, 238, 233);
+  background: url("../img/Office.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -13,9 +13,10 @@ body {
 .cardio {
   width: 20%;
   float:left;
-  background-color: white;
+  background-color:white;
   border-radius: 30px;
   height: 200px;
+  margin-left: 50px;
 
 }
 
@@ -38,7 +39,8 @@ body {
   float:right;
   background-color:white;
   border-radius: 30px;
-  height: 400px;
+  height: 150px;
+  margin-top: 15px;
   
 }
   
@@ -53,6 +55,7 @@ body {
   /*top:150px;
   background-color:white;
   height: 400px;*/
+  margin-bottom: 400px;
 }
 
 .graph2{
@@ -68,6 +71,12 @@ body {
 
 .aff{position: relative;
 bottom: 16px;
+}
+
+.stat{
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 

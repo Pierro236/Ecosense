@@ -47,10 +47,10 @@ if ($_GET) {
 
 
     <div class="navbar">
-        <img src="../img/logo.png" alt="logo" />
-        <a class="ES" href="home.php"> <img src="../img/heart.png" width="10%" /></a>
+        <img   class="ilog" src="../img/logo.png" alt="logo" />
+       <a href="home.php"> <img  class="ht"src="../img/heart.png" width="10%" /></a>
         <a class="home" href="home.php">Accueil</a>
-        <a class="name" href="profile.php">Mon profile</a>
+        <a class="name" href="profile.php">Mon profil</a>
 
     </div>
 
@@ -74,19 +74,16 @@ if ($_GET) {
         <div class="contain">
 
             <div class="col">
-                <h1>FAQ</h1>
+                <a style="text-decoration:none" href="FAQ.html" ><h1>FAQ</h1></a>
 
             </div>
             <div class="col">
-                <h1>CGU</h1>
+                <a  style="text-decoration:none" href="CGU.html"><h1>CGU</h1></a>
 
             </div>
+            
             <div class="col">
-                <h1>mentions légales</h1>
-
-            </div>
-            <div class="col">
-                <h1>contact@ecosense.com</h1>
+            <a  style="text-decoration:none" href="mailto:pierre.sedo@eleve.isep.fr, robin.lerda@eleve.isep.fr, julien.godfroy@eleve.isep.fr, francois.hascoat@eleve.isep.fr,timothe.bonnel@eleve.isep.fr, gabriel.hercaud@eleve.isep.fr"><h1>contact@ecosense.com</h1></a>
 
             </div>
 

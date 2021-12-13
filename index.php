@@ -68,6 +68,8 @@ if ($_GET) {
             <label><b><?php echo $lang['mdp']; ?></b></label>
             <input type="password" placeholder="Entrer le mot de passe" name="password" required>
 
+            <a class="newacc" style="text-decoration: none" href="php/registration.php"><p style="font-size: medium ; color: black">Créer votre compte</p></a>
+
             <input type="submit" name="Btncx" value='Connexion'>
 
         </form>
@@ -76,24 +78,22 @@ if ($_GET) {
     
 
     <div class="footer">
-  <div class="contain">
+         <div class="contain">
   
-  <div class="col">
-    <h1>FAQ</h1>
+        <div class="col">
+         <a style="text-decoration:none" href="php\FAQ.html"><h1>FAQ</h1></a>
     
-  </div>
-  <div class="col">
-    <h1>CGU</h1>
+         </div>
+        <div class="col">
+         <a href="php\CGU.html" style="text-decoration:none"><h1>CGU</h1></a>
     
-  </div>
-  <div class="col">
-    <h1>mentions légales</h1>
+        </div>
     
-  </div>
-  <div class="col">
-    <h1>contact@ecosense.com</h1>
+        </div>
+        <div class="col">
+        <a style="text-decoration:none" href="mailto:pierre.sedo@eleve.isep.fr, robin.lerda@eleve.isep.fr, julien.godfroy@eleve.isep.fr, francois.hascoat@eleve.isep.fr,timothe.bonnel@eleve.isep.fr, gabriel.hercaud@eleve.isep.fr"><h1>contact@ecosense.com</h1></a>
     
-  </div>
+     </div>
 
 
 </div>
