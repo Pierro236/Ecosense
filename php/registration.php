@@ -42,7 +42,7 @@ if ($_GET) {
 
 
     <div class="navbar">
-        <img  class="ilog" src="../img/logo.png" alt="logo" />
+        <img class="ilog" src="../img/logo.png" alt="logo" />
         <a class="ES"> EcoSense</a>
         <a class="home">Accueil</a>
         <a class="name">Nom</a>
@@ -72,55 +72,85 @@ if ($_GET) {
             </div>
 
             <label><b>Nom</b></label>
-            <input type="text" placeholder="Nom du nouvel utilisateur" name="surname" id="surname"required>
+            <input type="text" placeholder="Nom du nouvel utilisateur" name="surname" id="surname" required>
             <label><b>Prénom</b></label>
             <input type="text" placeholder="Prénom du nouvel utilisateur" name="name" id="name" required>
             <label><b>Adresse mail</b></label>
-            <input type="text" placeholder="Adresse mail du nouvel utilisateur" name="email" id="email"required>
+            <input type="text" placeholder="Adresse mail du nouvel utilisateur" name="email" id="email" required>
 
-            <input type="submit" name="Btncx" onclick="creatpassword" value='Générer un compte' id="password">
-        
-            <script>
-            function creatpassword($nbChar)
-	{
-		return substr(str_shuffle(
-			'abcdefghijklmnopqrstuvwxyzABCEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-		), 1, $nbChar);
-	}
-            </script>
+            <input type="submit" name="Btncx" onclick="alert('Le compte a bien été créer, l\'utilisateur recevra un mail avec ses identifiants ! ')" value='Générer un compte' id="password">
+
+
         </form>
-        
+
         <?php
-        
+        if ($_POST) {
+            function createpassword($nbChar)
+            {
+                return substr(str_shuffle(
+                    'abcdefghijklmnopqrstuvwxyzABCEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+                ), 1, $nbChar);
+            }
+            $password = createpassword(8);
+            echo $password;
+            extract($_POST);
 
-        extract($_POST);
+            $nom = $_POST['surname'];
+            $prenom = $_POST['name'];
+            $email = $_POST['email'];
+            $options = [
+                'cost' => 12,
+            ];
+            $hash_pass = password_hash($password, PASSWORD_BCRYPT, $options);
 
-        $options = [
-            'cost' => 12,
-        ];
-        $hash_pass = password_hash($password, PASSWORD_BCRYPT, $options);
-        
-        include '../config/config.php';
-        global $db;
+            include '../config/config.php';
+            global $db;
 
 
-        //$c = $db->prepare("SELECT email FROM users WHERE email = :email")
-        //$c->execute(['email' => $email]);
-        //$result = $c->rowCount();
+            //$c = $db->prepare("SELECT email FROM users WHERE email = :email")
+            //$c->execute(['email' => $email]);
+            //$result = $c->rowCount();
 
-        //if($result == 0){
+            //if($result == 0){
             $q = $db->prepare(" INSERT INTO  users(surname,name,email,password) VALUES(:surname, :name, :email, :password)");
             $q->execute([
                 'surname' => $surname,
                 'name' => $name,
                 'email' => $email,
                 'password' => $hash_pass
-                    ]);
-                   // echo "Le compte a bien été créé.";
+            ]);
+            // echo "Le compte a bien été créé.";
             //}else{
             //   echo "Cet Email est déjà utilisé !";
             //    }
-        
+
+
+
+            //envoi du mail
+            $header = "MIME-Version: 1.0\r\n";
+            $header .= 'From:"EcoSense"<ecosense.contact@gmail.com>' . "\n";
+            $header .= 'Content-Type:text/html; charset="uft-8"' . "\n";
+            $header .= 'Content-Transfer-Encoding: 8bit';
+
+            $message = '
+            <html>
+                <body>
+                    <div >
+                        Bonjour ' . $name . ' <br /><br />Bienvenu sur EcoSense.
+                        <br /><br />
+                        Un compte EcoSense vous a été créer.
+                        Pour y accéder, veuillez renseigner les identifiants suivants:<br />
+                        Identifiant : ' . $email . '<br />
+                        Mot de passe : ' . $password . '
+                        <br />
+                        
+                    </div>
+                </body>
+            </html>
+            ';
+
+            mail($email, "Bienvenu sur Ecosense !", $message, $header);
+        }
         ?>
     </div>
     <footer>
