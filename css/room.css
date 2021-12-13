@@ -9,6 +9,7 @@ body {
  
  .bvn{
    padding-top: 50px;
+   padding-top: 30px;
    font-weight: 1000;
    font-size: 50px;
    text-align: center;
@@ -23,6 +24,10 @@ body {
    background-color: white;
    border-radius: 30px;  
    margin-left: 3%;
+   margin-left: 10%;
+   background-color: white;
+   border-radius: 30px;  
+   margin-top: 0%;
  }
   
  .titre{
@@ -35,6 +40,7 @@ body {
    width: 40%; 
    height: 500px;
    margin-left: 10%;
+   margin-left: 15%;
    background-color: white;
    border-radius: 30px;
    /* display: inline-block; */
@@ -44,6 +50,7 @@ body {
    width: 40%; 
    height: 500px;
    margin-left: 10%;
+   margin-left: 15%;
    background-color: white;
    border-radius: 30px;
    /* display: inline-block; */
@@ -51,7 +58,6 @@ body {
 
  .align {
   display: flex;
-
 }
 
 .score1{
