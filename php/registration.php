@@ -126,6 +126,7 @@ if ($_GET) {
                 $header .= 'Content-Transfer-Encoding: 8bit';
 
                 $message = '
+<<<<<<< HEAD
             <html>
                 <body>
                     <div >
@@ -147,6 +148,29 @@ if ($_GET) {
             };
         } else {
             echo "Cet Email est déjà utilisé !";
+=======
+                    <html>
+                        <body>
+                            <div >
+                                Bonjour ' . $name . ' <br /><br />Bienvenu sur EcoSense.
+                                <br /><br />
+                                Un compte EcoSense vous a été créer.
+                                Pour y accéder, veuillez renseigner les identifiants suivants:<br />
+                                Identifiant : ' . $email . '<br />
+                                Mot de passe : ' . $password . '
+                                <br />
+                                
+                            </div>
+                        </body>
+                    </html>
+                ';
+
+                mail($email, "Bienvenu sur Ecosense !", $message, $header);
+                echo "Le compte a bien été créé.";
+            } else {
+                echo "Cet Email est déjà utilisé !";
+            }
+>>>>>>> 1572ffe435709144be8dedfaff86b8f012b80f9f
         }
         ?>
     </div>
