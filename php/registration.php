@@ -92,7 +92,7 @@ if ($_GET) {
                 ), 1, $nbChar);
             }
             $password = createpassword(8);
-            echo $password;
+            
             extract($_POST);
 
             $nom = $_POST['surname'];
@@ -105,13 +105,13 @@ if ($_GET) {
 
             include '../config/config.php';
             global $db;
+            
 
 
-            //$c = $db->prepare("SELECT email FROM users WHERE email = :email")
-            //$c->execute(['email' => $email]);
-            //$result = $c->rowCount();
-
-            //if($result == 0){
+             $c = $db->prepare("SELECT email FROM users WHERE email = :email");
+             $c->execute(['email' => $email]);
+             $result = $c->rowCount();
+             if($result == 0){
             $q = $db->prepare(" INSERT INTO  users(surname,name,email,password) VALUES(:surname, :name, :email, :password)");
             $q->execute([
                 'surname' => $surname,
@@ -119,13 +119,6 @@ if ($_GET) {
                 'email' => $email,
                 'password' => $hash_pass
             ]);
-            // echo "Le compte a bien été créé.";
-            //}else{
-            //   echo "Cet Email est déjà utilisé !";
-            //    }
-
-
-
             //envoi du mail
             $header = "MIME-Version: 1.0\r\n";
             $header .= 'From:"EcoSense"<ecosense.contact@gmail.com>' . "\n";
@@ -150,6 +143,15 @@ if ($_GET) {
             ';
 
             mail($email, "Bienvenu sur Ecosense !", $message, $header);
+            echo "Le compte a bien été créé.";
+        };
+             }else{
+                echo "Cet Email est déjà utilisé !";
+                
+                
+
+
+
         }
         ?>
     </div>
