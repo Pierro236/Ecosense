@@ -50,14 +50,10 @@ body {
    /* display: inline-block; */
  }
 
- .align {
-  display: flex;
-}
-
 .score1{
   float:right;
   width: 90%;
-  height: 80%;
+  height: 70%;
   padding-right: 20px;
   padding-top: 20px
 }
