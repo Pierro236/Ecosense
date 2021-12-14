@@ -67,30 +67,37 @@ if ($_GET) {
     </h1>
 
 
-    <div class="content"> 
-         <div class="score">
+    <div class="align">
+        <div class="score">
             <div class="titre">
-            Score de la salle   
+                Score de la salle 
             </div> 
-          <img class="score1" src="../img/diagramme-circulaire.png" alt="">      
-         </div>
+            <img class="score1" src="../img/diagramme-circulaire.png" alt="">
+        </div>
 
-         <div class="align">
-              <div class="sound">
-                  <div class="titre">
+        <div class="score2">
+            <div class="texte">
+                <p>Equitis Romani autem esse filium criminis loco poni ab accusatoribus neque his iudicantibus oportuit neque defendentibus nobis. Nam quod de pietate dixistis, est quidem ista nostra existimatio, sed iudicium certe parentis; quid nos opinemur, audietis ex iuratis; quid parentes sentiant, lacrimae matris incredibilisque maeror, squalor patris et haec praesens maestitia, quam cernitis, luctusque declarat.</p>
+            </div>
+            
+        </div>
+    </div>
+         
+
+    <div class="align2">
+        <div class="sound">
+            <div class="titre">
                 Niveau sonore
-              </div> 
+            </div> 
             <img class="sound1" src="../img/les-ondes-sonores.png" alt="">
-         </div>
+        </div>
 
         <div class="cod">
             <div class="titre">
                 Taux de CO2
             </div>
             <img class="cod2" src="../img/qualite-de-lair.png" alt="">
-            
         </div>
-    
     </div>
 
 
