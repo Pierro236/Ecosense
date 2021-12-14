@@ -18,7 +18,7 @@ CREATE TABLE Mesures (
     [Mesure ID]             INTEGER  PRIMARY KEY,
     [Capteur ID]            INTEGER  REFERENCES Capteur ([Capteur ID]),
     [Freq ID]               INTEGER  REFERENCES FreqCardiaque ([Freq ID]),
-    [Valeur Recue Salle]    DOUBLE (255),
+    [Valeur Recue Salle]    FLOAT (255),
     [Heure Reception Salle] DATETIME
 );
 
