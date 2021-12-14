@@ -68,8 +68,6 @@ if ($_GET) {
             <label><b><?php echo $lang['mdp']; ?></b></label>
             <input type="password" placeholder="Entrer le mot de passe" name="password" required>
 
-            <a class="newacc" style="text-decoration: none" href="php/registration.php"><p style="font-size: medium ; color: black">Créer votre compte</p></a>
-
             <input type="submit" name="Btncx" value='Connexion'>
 
         </form>
