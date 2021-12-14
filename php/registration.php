@@ -92,7 +92,7 @@ if ($_GET) {
                 ), 1, $nbChar);
             }
             $password = createpassword(8);
-            
+
             extract($_POST);
 
             $nom = $_POST['surname'];
@@ -105,53 +105,48 @@ if ($_GET) {
 
             include '../config/config.php';
             global $db;
-            
 
 
-             $c = $db->prepare("SELECT email FROM users WHERE email = :email");
-             $c->execute(['email' => $email]);
-             $result = $c->rowCount();
-             if($result == 0){
-            $q = $db->prepare(" INSERT INTO  users(surname,name,email,password) VALUES(:surname, :name, :email, :password)");
-            $q->execute([
-                'surname' => $surname,
-                'name' => $name,
-                'email' => $email,
-                'password' => $hash_pass
-            ]);
-            //envoi du mail
-            $header = "MIME-Version: 1.0\r\n";
-            $header .= 'From:"EcoSense"<ecosense.contact@gmail.com>' . "\n";
-            $header .= 'Content-Type:text/html; charset="uft-8"' . "\n";
-            $header .= 'Content-Transfer-Encoding: 8bit';
 
-            $message = '
-            <html>
-                <body>
-                    <div >
-                        Bonjour ' . $name . ' <br /><br />Bienvenu sur EcoSense.
-                        <br /><br />
-                        Un compte EcoSense vous a été créer.
-                        Pour y accéder, veuillez renseigner les identifiants suivants:<br />
-                        Identifiant : ' . $email . '<br />
-                        Mot de passe : ' . $password . '
-                        <br />
-                        
-                    </div>
-                </body>
-            </html>
-            ';
+            $c = $db->prepare("SELECT email FROM users WHERE email = :email");
+            $c->execute(['email' => $email]);
+            $result = $c->rowCount();
+            if ($result == 0) {
+                $q = $db->prepare(" INSERT INTO  users(surname,name,email,password) VALUES(:surname, :name, :email, :password)");
+                $q->execute([
+                    'surname' => $surname,
+                    'name' => $name,
+                    'email' => $email,
+                    'password' => $hash_pass
+                ]);
+                //envoi du mail
+                $header = "MIME-Version: 1.0\r\n";
+                $header .= 'From:"EcoSense"<ecosense.contact@gmail.com>' . "\n";
+                $header .= 'Content-Type:text/html; charset="uft-8"' . "\n";
+                $header .= 'Content-Transfer-Encoding: 8bit';
 
-            mail($email, "Bienvenu sur Ecosense !", $message, $header);
-            echo "Le compte a bien été créé.";
-        };
-             }else{
+                $message = '
+                    <html>
+                        <body>
+                            <div >
+                                Bonjour ' . $name . ' <br /><br />Bienvenu sur EcoSense.
+                                <br /><br />
+                                Un compte EcoSense vous a été créer.
+                                Pour y accéder, veuillez renseigner les identifiants suivants:<br />
+                                Identifiant : ' . $email . '<br />
+                                Mot de passe : ' . $password . '
+                                <br />
+                                
+                            </div>
+                        </body>
+                    </html>
+                ';
+
+                mail($email, "Bienvenu sur Ecosense !", $message, $header);
+                echo "Le compte a bien été créé.";
+            } else {
                 echo "Cet Email est déjà utilisé !";
-                
-                
-
-
-
+            }
         }
         ?>
     </div>
