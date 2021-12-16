@@ -103,7 +103,7 @@ if ($_GET) {
             ];
             $hash_pass = password_hash($password, PASSWORD_BCRYPT, $options);
 
-            include '../config/config.php';
+            include 'config.php';
             global $db;
 
 
