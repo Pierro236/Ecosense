@@ -1,6 +1,10 @@
 <?php
 
-include 'config/config.php';
+session_start() ?>
+
+<?php
+
+include 'php\config.php';
 
 if (isset($_GET['lang']) && !empty($_GET['lang'])) {
     if (file_exists('lang/' . $_GET['lang'] . '.php'))
@@ -53,8 +57,12 @@ if ($_GET) {
 
     <div id="container">
 
+
         
         <form id="login" action="php/home.php" method="POST">
+
+        <form id="login" action="php/connexion.php" method="POST">
+
             <div id="headerform">
                 <p class="name"><?php echo $lang['Login']; ?></p>
                 <img src="img/logo.png" alt="logo" class="logo">
@@ -66,7 +74,11 @@ if ($_GET) {
 
 
             <label><b>Identifiant</b></label>
+
             <input type="text" placeholder="Entrer le nom d'utilisateur" name="email" id="email" required>
+
+            
+
 
             <label><b><?php echo $lang['mdp']; ?></b></label>
             <input type="password" placeholder="Entrer le mot de passe" name="password" id="password" required>

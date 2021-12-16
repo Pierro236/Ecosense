@@ -1,6 +1,6 @@
 <?php
 
-include '../config/config.php';
+include 'config.php';
 
 if (isset($_GET['lang']) && !empty($_GET['lang'])) {
     if (file_exists('lang/' . $_GET['lang'] . '.php'))
@@ -103,7 +103,7 @@ if ($_GET) {
             ];
             $hash_pass = password_hash($password, PASSWORD_BCRYPT, $options);
 
-            include '../config/config.php';
+            include 'config.php';
             global $db;
 
 
