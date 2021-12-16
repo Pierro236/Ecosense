@@ -4,7 +4,7 @@ session_start() ?>
 
 <?php
 
-include 'config.php';
+include 'php\config.php';
 
 if (isset($_GET['lang']) && !empty($_GET['lang'])) {
     if (file_exists('lang/' . $_GET['lang'] . '.php'))
