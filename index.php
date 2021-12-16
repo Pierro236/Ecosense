@@ -54,7 +54,7 @@ if ($_GET) {
     <div id="container">
 
 
-        <form id="login" action="php/home.php" method="POST">
+        <form id="login" action="php/connexion.php" method="POST">
             <div id="headerform">
                 <p class="name"><?php echo $lang['Login']; ?></p>
                 <img src="img/logo.png" alt="logo" class ="logo">
