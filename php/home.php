@@ -95,3 +95,54 @@ if ($_GET) {
 
 
 </html>
+
+<?php
+include '../config/config.php';
+global $db;
+
+    if(isset($_POST['formlogin']))
+    {
+        extract($_POST);
+
+        if(!empty($email) && !empty($password))
+            {
+                $q = $db->prepare("SELECT * FROM users WHERE email =:email");
+                $q->execute(['email'=>$email]);
+                $result = $q->fetch();
+
+                if($result == true)
+                {
+                    //le compte existe
+                    if(password_verify($password, $result['password']))
+                    {
+                        echo "Mot de passe valide";
+                    }
+                    else{
+                        echo "Mot de passe invalide";
+                    }
+
+                }
+                else{
+                    echo "Le compte portant l'email". $email. " n'existe pas";
+                }
+            }
+            else{
+                echo "Veuillez completer l'ensemble des champs";
+            }
+    }
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+?>
