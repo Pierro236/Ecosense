@@ -63,7 +63,7 @@ if ($_GET) {
             </div>
 
             <label><b>Identifiant</b></label>
-            <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+            <input type="text" placeholder="Entrer le nom d'utilisateur" name="email" required>
 
             <label><b><?php echo $lang['mdp']; ?></b></label>
             <input type="password" placeholder="Entrer le mot de passe" name="password" required>
