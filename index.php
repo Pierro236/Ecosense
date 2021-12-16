@@ -1,5 +1,9 @@
 <?php
 
+session_start() ?>
+
+<?php
+
 include 'config/config.php';
 
 if (isset($_GET['lang']) && !empty($_GET['lang'])) {
