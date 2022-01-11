@@ -153,10 +153,7 @@ if ($_GET) {
         }
         ?>
     </div>
-    <footer>
-
-    </footer>
-
+    
 </body>
 
 </html>
