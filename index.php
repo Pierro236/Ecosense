@@ -1,6 +1,10 @@
 <?php
 
-include 'config/config.php';
+session_start() ?>
+
+<?php
+
+include 'php\config.php';
 
 if (isset($_GET['lang']) && !empty($_GET['lang'])) {
     if (file_exists('lang/' . $_GET['lang'] . '.php'))
@@ -35,7 +39,7 @@ if ($_GET) {
     <title>EcoSense | Accueil</title>
     <link rel="stylesheet" href="css/style_main.css" />
     <link rel="icon" type="image/jpg" href="" />
-    
+
 </head>
 
 <body>
@@ -50,52 +54,72 @@ if ($_GET) {
         </form>
     </div>
 
-    
+
     <div id="container">
 
 
+        
         <form id="login" action="php/home.php" method="POST">
+
+        <form id="login" action="php/connexion.php" method="POST">
+
             <div id="headerform">
                 <p class="name"><?php echo $lang['Login']; ?></p>
-                <img src="img/logo.png" alt="logo" class ="logo">
+                <img src="img/logo.png" alt="logo" class="logo">
 
 
             </div>
 
+
+
+
             <label><b>Identifiant</b></label>
-            <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+
+            <input type="text" placeholder="Entrer le nom d'utilisateur" name="email" id="email" required>
+
+            
+
 
             <label><b><?php echo $lang['mdp']; ?></b></label>
-            <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+            <input type="password" placeholder="Entrer le mot de passe" name="password" id="password" required>
 
-            <input type="submit" name="Btncx" value='Connexion'>
+            <input type="submit" name="Btncx" id="formlogin" value='Connexion'>
+
 
         </form>
+        
+
 
     </div>
-    
+
 
     <div class="footer">
-         <div class="contain">
-  
-        <div class="col">
-         <a style="text-decoration:none" href="php\FAQ.html"><h1>FAQ</h1></a>
-    
-         </div>
-        <div class="col">
-         <a href="php\CGU.html" style="text-decoration:none"><h1>CGU</h1></a>
-    
+        <div class="contain">
+
+            <div class="col">
+                <a style="text-decoration:none" href="php\FAQ.html">
+                    <h1>FAQ</h1>
+                </a>
+
+            </div>
+            <div class="col">
+                <a href="php\CGU.html" style="text-decoration:none">
+                    <h1>CGU</h1>
+                </a>
+
+            </div>
+
         </div>
-    
-        </div>
         <div class="col">
-        <a style="text-decoration:none" href="mailto:pierre.sedo@eleve.isep.fr, robin.lerda@eleve.isep.fr, julien.godfroy@eleve.isep.fr, francois.hascoat@eleve.isep.fr,timothe.bonnel@eleve.isep.fr, gabriel.hercaud@eleve.isep.fr"><h1>contact@ecosense.com</h1></a>
-    
-     </div>
+            <a style="text-decoration:none" href="mailto:pierre.sedo@eleve.isep.fr, robin.lerda@eleve.isep.fr, julien.godfroy@eleve.isep.fr, francois.hascoat@eleve.isep.fr,timothe.bonnel@eleve.isep.fr, gabriel.hercaud@eleve.isep.fr">
+                <h1>contact@ecosense.com</h1>
+            </a>
+
+        </div>
 
 
-</div>
-</div>
+    </div>
+    </div>
 
 <script src="http://www.example.com/cookiechoices.js"></script><script>document.addEventListener('DOMContentLoaded', function(event){cookieChoices.showCookieConsentBar('Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l’utilisation des cookies.', 'J’accepte', 'En savoir plus', 'http://www.example.com/mentions-legales/');});</script>
 </body>
