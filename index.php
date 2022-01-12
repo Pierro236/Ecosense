@@ -58,8 +58,8 @@ if ($_GET) {
     <div id="container">
 
 
-        
-        <form id="login" action="php/home.php" method="POST">
+
+
 
         <form id="login" action="php/connexion.php" method="POST">
 
@@ -77,7 +77,7 @@ if ($_GET) {
 
             <input type="text" placeholder="Entrer le nom d'utilisateur" name="email" id="email" required>
 
-            
+
 
 
             <label><b><?php echo $lang['mdp']; ?></b></label>
@@ -87,7 +87,7 @@ if ($_GET) {
 
 
         </form>
-        
+
 
 
     </div>
