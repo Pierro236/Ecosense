@@ -8,7 +8,7 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        $check = $db->prepare("SELECT email, password FROM users WHERE email = '$email'");
+        $check = $db->prepare("SELECT email, password FROM utilisateur WHERE email = '$email'");
         $check->execute(array($email));
         $data = $check->fetch();
         $row = $check->rowCount();

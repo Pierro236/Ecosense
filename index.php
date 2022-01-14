@@ -59,7 +59,7 @@ if ($_GET) {
 
 
         
-        <form id="login" action="php/home.php" method="POST">
+        <form id="login" action="php/connexion.php" method="POST">
 
         <form id="login" action="php/connexion.php" method="POST">
 

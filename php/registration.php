@@ -72,11 +72,11 @@ if ($_GET) {
             </div>
 
             <label><b>Nom</b></label>
-            <input type="text" placeholder="Nom du nouvel utilisateur" name="surname" id="surname" required>
+            <input type="text" placeholder="Nom du nouvel utilisateur" name="user_last_name" id="user_last_name" required>
             <label><b>Prénom</b></label>
-            <input type="text" placeholder="Prénom du nouvel utilisateur" name="name" id="name" required>
+            <input type="text" placeholder="Prénom du nouvel utilisateur" name="user_first_name" id="user_first_name" required>
             <label><b>Adresse mail</b></label>
-            <input type="text" placeholder="Adresse mail du nouvel utilisateur" name="email" id="email" required>
+            <input type="text" placeholder="Adresse mail du nouvel utilisateur" name="user_email" id="user_email" required>
 
             <input type="submit" name="Btncx" onclick="alert('Le compte a bien été créer, l\'utilisateur recevra un mail avec ses identifiants ! ')" value='Générer un compte' id="password">
 
@@ -91,33 +91,33 @@ if ($_GET) {
                     'abcdefghijklmnopqrstuvwxyzABCEFGHIJKLMNOPQRSTUVWXYZ0123456789'
                 ), 1, $nbChar);
             }
-            $password = createpassword(8);
+            $user_password = createpassword(8);
 
             extract($_POST);
 
-            $nom = $_POST['surname'];
-            $prenom = $_POST['name'];
-            $email = $_POST['email'];
+            $user_last_name = $_POST['user_last_name'];
+            $user_first_name = $_POST['user_first_name'];
+            $user_email = $_POST['user_email'];
             $options = [
                 'cost' => 12,
             ];
-            $hash_pass = password_hash($password, PASSWORD_BCRYPT, $options);
+            $hash_pass = password_hash($user_password, PASSWORD_BCRYPT, $options);
 
             include 'config.php';
             global $db;
 
 
 
-            $c = $db->prepare("SELECT email FROM users WHERE email = :email");
-            $c->execute(['email' => $email]);
+            $c = $db->prepare("SELECT user_email FROM utilisateur WHERE user_email = :user_email");
+            $c->execute(['user_email' => $user_email]);
             $result = $c->rowCount();
             if ($result == 0) {
-                $q = $db->prepare(" INSERT INTO  users(surname,name,email,password) VALUES(:surname, :name, :email, :password)");
+                $q = $db->prepare(" INSERT INTO  utilisateur(user_first_name,user_last_name,user_email,user_password) VALUES(:user_first_name, :user_last_name, :user_email, :user_password)");
                 $q->execute([
-                    'surname' => $surname,
-                    'name' => $name,
-                    'email' => $email,
-                    'password' => $hash_pass
+                    'user_first_name' => $user_first_name,
+                    'user_last_name' => $user_last_name,
+                    'user_email' => $user_email,
+                    'user_password' => $hash_pass
                 ]);
                 //envoi du mail
                 $header = "MIME-Version: 1.0\r\n";
@@ -129,12 +129,12 @@ if ($_GET) {
                     <html>
                         <body>
                             <div >
-                                Bonjour ' . $name . ' <br /><br />Bienvenu sur EcoSense.
+                                Bonjour ' . $user_last_name . ' <br /><br />Bienvenue sur EcoSense.
                                 <br /><br />
-                                Un compte EcoSense vous a été créer.
+                                Un compte EcoSense vous a été créé.
                                 Pour y accéder, veuillez renseigner les identifiants suivants:<br />
-                                Identifiant : ' . $email . '<br />
-                                Mot de passe : ' . $password . '
+                                Identifiant : ' . $user_email . '<br />
+                                Mot de passe : ' . $user_password . '
                                 <br />
                                 
                             </div>
@@ -142,10 +142,10 @@ if ($_GET) {
                     </html>
                 ';
 
-                mail($email, "Bienvenu sur Ecosense !", $message, $header);
-                echo "Le compte a bien été créé.";
+                mail($user_email, "Bienvenu sur Ecosense !", $message, $header);
+                echo "<p style='color:green;'>" ."Le compte a bien était créé" ."</p>";
             } else {
-                echo "Cet Email est déjà utilisé !";
+                echo "<p style='color:red;'>" ."Cet Email est déjà utilisé !" ."</p>";
             }
         }
         ?>
