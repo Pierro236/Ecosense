@@ -84,8 +84,7 @@ if ($_GET) {
             <input type="password" placeholder="Entrer le mot de passe" name="password" id="password" required>
 
             <input type="submit" name="Btncx" id="formlogin" value='Connexion'>
-
-
+            
         </form>
         
 

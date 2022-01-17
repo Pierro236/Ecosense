@@ -14,7 +14,7 @@ body {
 
 .paragraphe{
 
-  background-color: rgb(188, 241, 188, 0.4);
+  background-color: rgb(188, 241, 188, 0.8);
   width: 50%;
   color: black;
 
@@ -82,7 +82,7 @@ body {
 .cardio {
   width: 30%;
   float:right;
-  background-color: rgb(188, 241, 188, 0.4);
+  background-color: rgb(188, 241, 188, 0.8);
   border-radius: 30px;
   height: 30%;
 
