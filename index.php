@@ -84,7 +84,7 @@ if ($_GET) {
             <input type="password" placeholder="Entrer le mot de passe" name="password" id="password" required>
 
             <input type="submit" name="Btncx" id="formlogin" value='Connexion'>
-            
+
         </form>
 
 
@@ -120,7 +120,7 @@ if ($_GET) {
     </div>
     </div>
 
-    script type="text/javascript" id="cookiebanner" src="https://cdnjs.cloudflare.com/ajax/libs/cookie-banner/1.0.0/cookiebanner.min.js" data-position="top" data-fg="#ffffff" data-bg="#3c546b" data-link="#99011e" data-moreinfo="https://www.cookiechoices.org/" data-message="Les cookies assurent le bon fonctionnement de notre site Internet. En utilisant ce dernier, vous acceptez leur utilisation." data-linkmsg="En savoir plus"></script>
+    <script type="text/javascript" id="cookiebanner" src="https://cdnjs.cloudflare.com/ajax/libs/cookie-banner/1.0.0/cookiebanner.min.js" data-position="top" data-fg="#ffffff" data-bg="#3c546b" data-link="#99011e" data-moreinfo="https://www.cookiechoices.org/" data-message="Les cookies assurent le bon fonctionnement de notre site Internet. En utilisant ce dernier, vous acceptez leur utilisation." data-linkmsg="En savoir plus"></script>
 </body>
 
 
