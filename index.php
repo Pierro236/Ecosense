@@ -73,17 +73,17 @@ if ($_GET) {
 
 
 
-            <label><b>Identifiant</b></label>
+            <label><b><?php echo $lang['username']; ?></b></label>
 
-            <input type="text" placeholder="Entrer le nom d'utilisateur" name="email" id="email" required>
+            <input type="text" placeholder=<?php echo $lang['enterid']; ?> name="email" id="email" required>
 
 
 
 
             <label><b><?php echo $lang['mdp']; ?></b></label>
-            <input type="password" placeholder="Entrer le mot de passe" name="password" id="password" required>
+            <input type="password" placeholder=<?php echo $lang['enterpw']; ?> name="password" id="password" required>
 
-            <input type="submit" name="Btncx" id="formlogin" value='Connexion'>
+            <input type="submit" name="Btncx" id="formlogin" value=<?php echo $lang['connect']; ?>>
 
         </form>
 
