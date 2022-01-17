@@ -58,8 +58,8 @@ if ($_GET) {
     <div id="container">
 
 
-        
-        <form id="login" action="php/connexion.php" method="POST">
+
+
 
         <form id="login" action="php/connexion.php" method="POST">
 
@@ -77,7 +77,7 @@ if ($_GET) {
 
             <input type="text" placeholder="Entrer le nom d'utilisateur" name="email" id="email" required>
 
-            
+
 
 
             <label><b><?php echo $lang['mdp']; ?></b></label>
@@ -86,7 +86,7 @@ if ($_GET) {
             <input type="submit" name="Btncx" id="formlogin" value='Connexion'>
             
         </form>
-        
+
 
 
     </div>
@@ -120,7 +120,16 @@ if ($_GET) {
     </div>
     </div>
 
-<script src="http://www.example.com/cookiechoices.js"></script><script>document.addEventListener('DOMContentLoaded', function(event){cookieChoices.showCookieConsentBar('Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l’utilisation des cookies.', 'J’accepte', 'En savoir plus', 'http://www.example.com/mentions-legales/');});</script>
+<<<<<<< HEAD
+    <script type="text/javascript" id="cookiebanner" src="https://cdnjs.cloudflare.com/ajax/libs/cookie-banner/1.0.0/cookiebanner.min.js" data-position="top" data-fg="#ffffff" data-bg="#3c546b" data-link="#99011e" data-moreinfo="https://www.cookiechoices.org/" data-message="Les cookies assurent le bon fonctionnement de notre site Internet. En utilisant ce dernier, vous acceptez leur utilisation." data-linkmsg="En savoir plus"></script>
+=======
+    <script src="http://www.example.com/cookiechoices.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+            cookieChoices.showCookieConsentBar('Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l’utilisation des cookies.', 'J’accepte', 'En savoir plus', 'http://www.example.com/mentions-legales/');
+        });
+    </script>
+>>>>>>> a25c27b4f7d7e7d7aa40ad2cbe961832f15e3122
 </body>
 
 

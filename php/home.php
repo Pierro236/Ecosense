@@ -1,32 +1,7 @@
-<?php 
+<?php
 session_start()
 ?>
-<?php
 
-include 'config.php';
-
-if (isset($_GET['lang']) && !empty($_GET['lang'])) {
-    if (file_exists('lang/' . $_GET['lang'] . '.php'))
-        require_once('lang/' . htmlentities($_GET['lang']) . '.php');
-    else
-        require_once('../lang/fr.php');
-} /*else if (file_exists('lang/' . $_SERVEUR['HTTP_ACCEPT_LANGUAGE'] . '.php')) {
-    require_once('lang/' . htmlentities($_SERVEUR['HTTP_ACCEPT_LANGUAGE']) . '.php');
-}*/ else {
-    require_once('../lang/fr.php');
-}
-
-if ($_GET) {
-    $_GET['lang'] = $_GET['lang'];
-
-
-    /*if (!empty($num) and !empty($destination)) {
-        $db->exec("INSERT INTO table_base(num,destination) VALUES ('$num','$destination')");
-    } else echo "<strong>Un ou plusieurs champs n'ont pas été renseignés. Réessayez en remplissant l'entièreté du formulaire.</strong>";*/
-}
-
-
-?>
 
 
 
@@ -50,8 +25,8 @@ if ($_GET) {
 
 
     <div class="navbar">
-        <img   class="ilog" src="../img/logo.png" alt="logo" />
-       <a href="home.php"> <img  class="ht"src="../img/heart.png" width="10%" /></a>
+        <img class="ilog" src="../img/logo.png" alt="logo" />
+        <a href="home.php"> <img class="ht" src="../img/heart.png" width="10%" /></a>
         <a class="home" href="home.php">Accueil</a>
         <a class="name" href="profile.php">Mon profil</a>
 
@@ -65,28 +40,28 @@ if ($_GET) {
         </div>
     </div>
 
-    <form method="GET" action="">
-        <select id="lang" name="lang">
-            <option value="fr">Francais</option>
-            <option value="en">English</option>
-        </select>
-        <input type="submit" value="Envoyer">
-    </form>
+
 
     <div class="footer">
         <div class="contain">
 
             <div class="col">
-                <a style="text-decoration:none" href="FAQ.html" ><h1>FAQ</h1></a>
+                <a style="text-decoration:none" href="FAQ.html">
+                    <h1>FAQ</h1>
+                </a>
 
             </div>
             <div class="col">
-                <a  style="text-decoration:none" href="CGU.html"><h1>CGU</h1></a>
+                <a style="text-decoration:none" href="CGU.html">
+                    <h1>CGU</h1>
+                </a>
 
             </div>
-            
+
             <div class="col">
-            <a  style="text-decoration:none" href="mailto:pierre.sedo@eleve.isep.fr, robin.lerda@eleve.isep.fr, julien.godfroy@eleve.isep.fr, francois.hascoat@eleve.isep.fr,timothe.bonnel@eleve.isep.fr, gabriel.hercaud@eleve.isep.fr"><h1>contact@ecosense.com</h1></a>
+                <a style="text-decoration:none" href="mailto:pierre.sedo@eleve.isep.fr, robin.lerda@eleve.isep.fr, julien.godfroy@eleve.isep.fr, francois.hascoat@eleve.isep.fr,timothe.bonnel@eleve.isep.fr, gabriel.hercaud@eleve.isep.fr">
+                    <h1>contact@ecosense.com</h1>
+                </a>
 
             </div>
 
@@ -98,4 +73,3 @@ if ($_GET) {
 
 
 </html>
-
