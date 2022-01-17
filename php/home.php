@@ -1,7 +1,32 @@
 <?php
 session_start()
 ?>
+<?php
 
+include 'config.php';
+
+if (isset($_GET['lang']) && !empty($_GET['lang'])) {
+    if (file_exists('lang/' . $_GET['lang'] . '.php'))
+        require_once('lang/' . htmlentities($_GET['lang']) . '.php');
+    else
+        require_once('../lang/fr.php');
+} /*else if (file_exists('lang/' . $_SERVEUR['HTTP_ACCEPT_LANGUAGE'] . '.php')) {
+    require_once('lang/' . htmlentities($_SERVEUR['HTTP_ACCEPT_LANGUAGE']) . '.php');
+}*/ else {
+    require_once('../lang/fr.php');
+}
+
+if ($_GET) {
+    $_GET['lang'] = $_GET['lang'];
+
+
+    /*if (!empty($num) and !empty($destination)) {
+        $db->exec("INSERT INTO table_base(num,destination) VALUES ('$num','$destination')");
+    } else echo "<strong>Un ou plusieurs champs n'ont pas été renseignés. Réessayez en remplissant l'entièreté du formulaire.</strong>";*/
+}
+
+
+?>
 
 
 
@@ -40,7 +65,13 @@ session_start()
         </div>
     </div>
 
-
+    <form method="GET" action="">
+        <select id="lang" name="lang">
+            <option value="fr">Francais</option>
+            <option value="en">English</option>
+        </select>
+        <input type="submit" value="Envoyer">
+    </form>
 
     <div class="footer">
         <div class="contain">
