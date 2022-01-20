@@ -1,5 +1,8 @@
 <?php
-
+session_start();
+if (!isset($_SESSION['user_first_name'])) { //if login in session is not set
+    header("Location: ../index.php");
+}
 include 'config.php';
 
 if (isset($_GET['lang']) && !empty($_GET['lang'])) {
@@ -45,8 +48,20 @@ if ($_GET) {
         <img class="ilog" src="../img/logo.png" alt="logo" />
         <a class="ES"> EcoSense</a>
         <a class="home" href="home.php">Accueil</a>
-        <a class="name" href=profile.php>Nom</a>
+        <?php
+        if ($_SESSION['role'] == 'user') {
+            echo '      
+                <a class="name" href="profile.php">' . $_SESSION['user_first_name'] . '</a>
+                ';
+        }
 
+        if ($_SESSION['role'] == 'admin') {
+            echo '      
+                <a class="home" href="registration.php">Administration</a>
+                ';
+        }
+        ?>
+        <a href="logout.php" class="home">Déconnecter</a>
     </div>
 
     <form method="GET" action="">

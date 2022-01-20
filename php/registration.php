@@ -1,3 +1,35 @@
+<?php
+session_start();
+if ($_SESSION['role'] != 'admin') { //if login in session is not set
+    header("Location: home.php");
+}
+include 'config.php';
+
+if (isset($_GET['lang']) && !empty($_GET['lang'])) {
+    if (file_exists('lang/' . $_GET['lang'] . '.php'))
+        require_once('lang/' . htmlentities($_GET['lang']) . '.php');
+    else
+        require_once('../lang/fr.php');
+} /*else if (file_exists('lang/' . $_SERVEUR['HTTP_ACCEPT_LANGUAGE'] . '.php')) {
+    require_once('lang/' . htmlentities($_SERVEUR['HTTP_ACCEPT_LANGUAGE']) . '.php');
+}*/ else {
+    require_once('../lang/fr.php');
+}
+
+if ($_GET) {
+    $_GET['lang'] = $_GET['lang'];
+
+
+    /*if (!empty($num) and !empty($destination)) {
+        $db->exec("INSERT INTO table_base(num,destination) VALUES ('$num','$destination')");
+    } else echo "<strong>Un ou plusieurs champs n'ont pas été renseignés. Réessayez en remplissant l'entièreté du formulaire.</strong>";*/
+}
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -15,20 +47,40 @@
     <div class="navbar">
         <img class="ilog" src="../img/logo.png" alt="logo" />
         <a class="ES"> EcoSense</a>
-        <a class="home">Accueil</a>
-        <a class="name">Nom</a>
+        <a class="home" href="home.php">Accueil</a>
+        <?php
+        if ($_SESSION['role'] == 'user') {
+            echo '      
+                <a class="name" href="profile.php">' . $_SESSION['user_first_name'] . '</a>
+                ';
+        }
 
+        if ($_SESSION['role'] == 'admin') {
+            echo '      
+                <a class="home" href="registration.php">Administration</a>
+                ';
+        }
+        ?>
+        <a href="logout.php" class="home">Déconnecter</a>
     </div>
 
 
 
 
+    <form method="GET" action="">
+        <select id="lang" name="lang">
+            <option value="fr">Francais</option>
+            <option value="en">English</option>
+        </select>
+        <input type="submit" value="Envoyer">
+    </form>
+
     <div id="container">
 
 
-        <form id="registration" action="" method="POST">
+        <form id="registration" action="adduser.php" method="POST">
             <div id="headerform">
-                <p class="name">Créer un compte</p>
+                <p class="name"><?php echo $lang['Login']; ?></p>
                 <img src="../img/logo.png" alt="logo" class="logo">
 
 
@@ -45,73 +97,69 @@
 
 
         </form>
+        <form id="registration" action="addsalle.php" method="POST">
+            <div id="headerform">
+                <p class="name">Ajouter une salle</p>
+                <img src="../img/logo.png" alt="logo" class="logo">
+            </div>
 
-        <?php
-        if ($_POST) {
-            function createpassword($nbChar)
-            {
-                return substr(str_shuffle(
-                    'abcdefghijklmnopqrstuvwxyzABCEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-                ), 1, $nbChar);
-            }
-            $user_password = createpassword(8);
+            <label><b>Nom de la salle</b></label>
+            <input type="text" placeholder="Nom de la salle à ajouter" name="room_name" id="room_name" required>
 
-            extract($_POST);
-
-            $user_last_name = $_POST['user_last_name'];
-            $user_first_name = $_POST['user_first_name'];
-            $user_email = $_POST['user_email'];
-            $options = [
-                'cost' => 12,
-            ];
-            $hash_pass = password_hash($user_password, PASSWORD_BCRYPT, $options);
-
-            include 'config.php';
-            global $db;
+            <input type="submit" name="addsalle" onclick="alert('La salle ça bien été ajoutée')" value='Ajouter une salle' id="addroom">
 
 
+        </form>
 
-            $c = $db->prepare("SELECT user_email FROM utilisateur WHERE user_email = :user_email");
-            $c->execute(['user_email' => $user_email]);
-            $result = $c->rowCount();
-            if ($result == 0) {
-                $q = $db->prepare(" INSERT INTO  utilisateur(user_first_name,user_last_name,user_email,user_password) VALUES(:user_first_name, :user_last_name, :user_email, :user_password)");
-                $q->execute([
-                    'user_first_name' => $user_first_name,
-                    'user_last_name' => $user_last_name,
-                    'user_email' => $user_email,
-                    'user_password' => $hash_pass
-                ]);
-                //envoi du mail
-                $header = "MIME-Version: 1.0\r\n";
-                $header .= 'From:"EcoSense"<ecosense.contact@gmail.com>' . "\n";
-                $header .= 'Content-Type:text/html; charset="uft-8"' . "\n";
-                $header .= 'Content-Transfer-Encoding: 8bit';
+        <form id="registration" action="rmroom.php" method="POST">
+            <div id="headerform">
+                <p class="name">Supprimer une salle</p>
+                <img src="../img/logo.png" alt="logo" class="logo">
+            </div>
 
-                $message = '
-                    <html>
-                        <body>
-                            <div >
-                                Bonjour ' . $user_last_name . ' <br /><br />Bienvenue sur EcoSense.
-                                <br /><br />
-                                Un compte EcoSense vous a été créé.
-                                Pour y accéder, veuillez renseigner les identifiants suivants:<br />
-                                Identifiant : ' . $user_email . '<br />
-                                Mot de passe : ' . $user_password . '
-                                <br />
-                                
-                            </div>
-                        </body>
-                    </html>
-                ';
+            <label><b>Nom de la salle</b></label>
+            <select name="room_to_remove" id="room_to_remove">
+                <option value=""> Sélectionnez une salle </option>
+                <?php
+                $sql = $db->prepare('SELECT room_name FROM room');
+                $sql->execute();
+                $rooms = $sql->fetchAll(PDO::FETCH_COLUMN);
+                for ($i = 0; $i < count($rooms); $i++) {
+                    echo '<option value="' . $rooms[$i] . '">' . $rooms[$i] . '</option>';
+                }
+                ?>
+            </select>
 
-                mail($user_email, "Bienvenu sur Ecosense !", $message, $header);
-                echo "<p style='color:green;'>" . "Le compte a bien était créé" . "</p>";
-            } else {
-                echo "<p style='color:red;'>" . "Cet Email est déjà utilisé !" . "</p>";
-            }
-        }
-        ?>
+            <input type="submit" name="rmroom" onclick="alert('La salle ça bien été supprimée')" value='Supprimer une salle' id="rmroom">
+        </form>
+
+        <form id="registration" action="rmuser.php" method="POST">
+            <div id="headerform">
+                <p class="name">Supprimer un utilisateur</p>
+                <img src="../img/logo.png" alt="logo" class="logo">
+            </div>
+
+            <label><b>Adresse mail de l'utilisateur</b></label>
+            <select name="user_to_remove" id="user_to_remove">
+                <option value=""> Sélectionnez un utilisateur </option>
+                <?php
+                $sql = $db->prepare('SELECT user_email FROM utilisateur WHERE id_role != 0');
+                $sql->execute();
+                $utilisateurs = $sql->fetchAll(PDO::FETCH_COLUMN);
+                for ($i = 0; $i < count($utilisateurs) - 1; $i++) {
+                    echo '<option value="' . $utilisateurs[$i] . '">' . $utilisateurs[$i] . '</option>';
+                }
+                ?>
+            </select>
+
+            <input type="submit" name="rmroom" onclick="alert('Utilisateur  supprimé')" value='Supprimer un utilisateur' id="rmroom">
+
+
+        </form>
+
+
+
+
     </div>
 
 </body>
