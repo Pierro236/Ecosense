@@ -1,5 +1,8 @@
 <?php
-session_start()
+session_start();
+if (!isset($_SESSION['user_first_name'])) { //if login in session is not set
+    header("Location: ../index.php");
+}
 ?>
 <?php
 
@@ -66,6 +69,7 @@ if ($_GET) {
                 ';
         }
         ?>
+        <a href="logout.php" class="home">Déconnecter</a>
     </div>
 
 

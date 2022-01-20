@@ -1,5 +1,8 @@
 <?php
 session_start();
+if ($_SESSION['role'] != 'user') { //if login in session is not set
+    header("Location: ../index.php");
+}
 include 'config.php';
 
 if (isset($_GET['lang']) && !empty($_GET['lang'])) {
@@ -112,6 +115,7 @@ if ($_GET) {
                 ';
         }
         ?>
+        <a href="logout.php" class="home">Déconnecter</a>
     </div>
 
 
