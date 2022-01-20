@@ -1,12 +1,17 @@
 <?php
-echo session_save_path();
+
 require_once 'config.php';
 
-$user_email = 'julien.godfroy27@gmail.com';
-$user_password = 'admin';
 
-$sql  = "SELECT * FROM utilisateur WHERE user_email = '$user_email' LIMIT 1";
+
+$sql = $db->prepare('SELECT room_name FROM room');
+$sql->execute();
+$rooms = $sql->fetchAll(PDO::FETCH_COLUMN);
+echo count($rooms);
+echo $rooms[4];
+/*
+$sql  = "SELECT room_name FROM room";
 $q = $db->query($sql);
 $q->setFetchMode(PDO::FETCH_ASSOC);
-$datauser = $q->fetch();
-echo $datauser['user_email'];
+$room = $q->fetch();
+echo $room[0]['id_room'];*/
