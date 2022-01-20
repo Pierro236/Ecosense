@@ -111,6 +111,54 @@ if ($_GET) {
 
         </form>
 
+        <form id="registration" action="rmroom.php" method="POST">
+            <div id="headerform">
+                <p class="name">Supprimer une salle</p>
+                <img src="../img/logo.png" alt="logo" class="logo">
+            </div>
+
+            <label><b>Nom de la salle</b></label>
+            <select name="room_to_remove" id="room_to_remove">
+                <option value=""> Sélectionnez une salle </option>
+                <?php
+                $sql = $db->prepare('SELECT room_name FROM room');
+                $sql->execute();
+                $rooms = $sql->fetchAll(PDO::FETCH_COLUMN);
+                for ($i = 0; $i < count($rooms); $i++) {
+                    echo '<option value="' . $rooms[$i] . '">' . $rooms[$i] . '</option>';
+                }
+                ?>
+            </select>
+
+            <input type="submit" name="rmroom" onclick="alert('La salle ça bien été supprimée')" value='Supprimer une salle' id="rmroom">
+        </form>
+
+        <form id="registration" action="rmuser.php" method="POST">
+            <div id="headerform">
+                <p class="name">Supprimer un utilisateur</p>
+                <img src="../img/logo.png" alt="logo" class="logo">
+            </div>
+
+            <label><b>Adresse mail de l'utilisateur</b></label>
+            <select name="user_to_remove" id="user_to_remove">
+                <option value=""> Sélectionnez un utilisateur </option>
+                <?php
+                $sql = $db->prepare('SELECT user_email FROM utilisateur WHERE id_role != 0');
+                $sql->execute();
+                $utilisateurs = $sql->fetchAll(PDO::FETCH_COLUMN);
+                for ($i = 0; $i < count($utilisateurs) - 1; $i++) {
+                    echo '<option value="' . $utilisateurs[$i] . '">' . $utilisateurs[$i] . '</option>';
+                }
+                ?>
+            </select>
+
+            <input type="submit" name="rmroom" onclick="alert('Utilisateur  supprimé')" value='Supprimer un utilisateur' id="rmroom">
+
+
+        </form>
+
+
+
 
     </div>
 

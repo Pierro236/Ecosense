@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 20 jan. 2022 à 22:55
+-- Généré le : jeu. 20 jan. 2022 à 23:31
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.4.9
 
@@ -99,7 +99,6 @@ CREATE TABLE IF NOT EXISTS `room` (
 --
 
 INSERT INTO `room` (`id_room`, `room_name`) VALUES
-(1, '301'),
 (2, '303'),
 (3, 'L012'),
 (4, 'N355'),
@@ -130,7 +129,6 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 
 INSERT INTO `utilisateur` (`id_user`, `id_role`, `user_email`, `user_last_name`, `user_first_name`, `user_password`, `date`) VALUES
 (5, 1, 'francoishascoat@gmail.com', 'HASCOAT', 'François', '$2y$12$CChWmY5Y4t80enRgimL4heAwNnRc6GXut97tLOp6GoJkAY7/MhqYC', '2022-01-17 13:59:31'),
-(2, 1, 'asas', 'jerome', 'oas', '$2y$12$6GZbm0tgFtijOAGQnZdkX.nKCONQIHvwRcRbPTtyTJB7gaT4j87ky', '2022-01-12 10:36:33'),
 (3, 1, 'marc@gmail.com', 'jean', 'marc', '$2y$12$PtyQws88w/IiZnzC2MRMDeKe3EU4UnLWX/vYMkYo8FZoXSoXCP.Z.', '2022-01-14 15:24:50'),
 (6, 1, 'julien.godfroy27@gmail.com', 'Godfroy', 'Julien', '$2y$12$RIUp/CaUzXTMOY5GdRgvD.ByfhDqlDGhqH/3nOGOm/f8WHcW9rUEi', '2022-01-20 16:28:38'),
 (7, 1, 'slkjd@gmail.com', 'qskld', 'qslkdjqs', '$2y$12$uDHK9lNpTPfYIUBIdNpZ5OnRBIhkL0hOjQSaES4j8iW5hPNomEztK', '2022-01-20 17:03:51'),
