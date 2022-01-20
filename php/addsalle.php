@@ -23,3 +23,4 @@ if ($_POST) {
         echo "<p style='color:red;'>" . "Cette est existe déjà !" . "</p>";
     }
 }
+header('Location: registration.php');

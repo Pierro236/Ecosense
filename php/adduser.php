@@ -66,3 +66,4 @@ if ($_POST) {
         echo "<p style='color:red;'>" . "Cet Email est déjà utilisé !" . "</p>";
     }
 }
+header('Location: registration.php');
