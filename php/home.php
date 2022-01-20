@@ -53,8 +53,19 @@ if ($_GET) {
         <img class="ilog" src="../img/logo.png" alt="logo" />
         <a href="home.php"> <img class="ht" src="../img/heart.png" width="10%" /></a>
         <a class="home" href="home.php">Accueil</a>
-        <a class="name" href="profile.php">Mon profil</a>
+        <?php
+        if ($_SESSION['role'] == 'user') {
+            echo '      
+                <a class="name" href="profile.php">' . $_SESSION['user_first_name'] . '</a>
+                ';
+        }
 
+        if ($_SESSION['role'] == 'admin') {
+            echo '      
+                <a class="home" href="registration.php">Administration</a>
+                ';
+        }
+        ?>
     </div>
 
 

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include 'config.php';
 
 if (isset($_GET['lang']) && !empty($_GET['lang'])) {
@@ -99,8 +99,19 @@ if ($_GET) {
 
         <a class="ES"> EcoSense</a>
         <a href="home.php" class="home">Accueil</a>
-        <a href="profile.php" class="name">Nom</a>
+        <?php
+        if ($_SESSION['role'] == 'user') {
+            echo '      
+                <a class="name" href="profile.php">' . $_SESSION['user_first_name'] . '</a>
+                ';
+        }
 
+        if ($_SESSION['role'] == 'admin') {
+            echo '      
+                <a class="home" href="registration.php">Administration</a>
+                ';
+        }
+        ?>
     </div>
 
 

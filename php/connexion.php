@@ -24,6 +24,8 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             //if($data['user_password'] === $user_password)
             if (password_verify($user_password, $data['user_password'])) {
                 $_SESSION['user_email'] = $user_email; // la session peut être appelée différemment et son contenu aussi peut être autre chose que l'identifiant'
+                $_SESSION['user_last_name'] = $datauser['user_last_name'];
+                $_SESSION['user_first_name'] = $datauser['user_first_name'];
                 if ($datauser['id_role'] == 1) {
                     $_SESSION['role'] = 'user';
                 } else {

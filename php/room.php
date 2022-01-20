@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include 'config.php';
 
 if (isset($_GET['lang']) && !empty($_GET['lang'])) {
@@ -41,11 +41,23 @@ if ($_GET) {
 <body>
 
 
-    <div class="navbar"> 
-        <img  class="ilog" src="../img/logo.png" alt="logo" />
+    <div class="navbar">
+        <img class="ilog" src="../img/logo.png" alt="logo" />
         <a class="ES"> EcoSense</a>
-        <a class="home" href = "home.php">Accueil</a>
-        <a class="name" href = "profile.php">Nom</a>
+        <a class="home" href="home.php">Accueil</a>
+        <?php
+        if ($_SESSION['role'] == 'user') {
+            echo '      
+                <a class="name" href="profile.php">' . $_SESSION['user_first_name'] . '</a>
+                ';
+        }
+
+        if ($_SESSION['role'] == 'admin') {
+            echo '      
+                <a class="home" href="registration.php">Administration</a>
+                ';
+        }
+        ?>
 
     </div>
 
@@ -70,8 +82,8 @@ if ($_GET) {
     <div class="align">
         <div class="score">
             <div class="titre">
-                Score de la salle 
-            </div> 
+                Score de la salle
+            </div>
             <img class="score1" src="../img/diagramme-circulaire.png" alt="">
         </div>
 
@@ -79,16 +91,16 @@ if ($_GET) {
             <div class="texte">
                 <p>Equitis Romani autem esse filium criminis loco poni ab accusatoribus neque his iudicantibus oportuit neque defendentibus nobis. Nam quod de pietate dixistis, est quidem ista nostra existimatio, sed iudicium certe parentis; quid nos opinemur, audietis ex iuratis; quid parentes sentiant, lacrimae matris incredibilisque maeror, squalor patris et haec praesens maestitia, quam cernitis, luctusque declarat.</p>
             </div>
-            
+
         </div>
     </div>
-         
+
 
     <div class="align2">
         <div class="sound">
             <div class="titre">
                 Niveau sonore
-            </div> 
+            </div>
             <img class="sound1" src="../img/les-ondes-sonores.png" alt="">
         </div>
 

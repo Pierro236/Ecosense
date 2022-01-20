@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include 'config.php';
 
 if (isset($_GET['lang']) && !empty($_GET['lang'])) {
@@ -44,9 +44,20 @@ if ($_GET) {
     <div class="navbar">
         <img class="ilog" src="../img/logo.png" alt="logo" />
         <a class="ES"> EcoSense</a>
-        <a class="home">Accueil</a>
-        <a class="name">Nom</a>
+        <a class="home" href="home.php">Accueil</a>
+        <?php
+        if ($_SESSION['role'] == 'user') {
+            echo '      
+                <a class="name" href="profile.php">' . $_SESSION['user_first_name'] . '</a>
+                ';
+        }
 
+        if ($_SESSION['role'] == 'admin') {
+            echo '      
+                <a class="home" href="registration.php">Administration</a>
+                ';
+        }
+        ?>
     </div>
 
 
