@@ -93,8 +93,6 @@ bottom: 16px;
   height: auto;
   background-color: #070617;
   flex: 1.2;
-  position: absolute;
-  bottom: 0;
 }
 
 .footer .col {
