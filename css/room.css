@@ -20,7 +20,7 @@ body {
  .score{
    width: 30%;
    height: 500px;
-   background-color: white;
+   background-color: rgb(188, 241, 188, 0.6);
    border-radius: 30px;  
    margin-left: 10%;
  }

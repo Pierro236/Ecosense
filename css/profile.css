@@ -13,7 +13,7 @@ body {
 .cardio {
   width: 20%;
   float:left;
-  background-color:white;
+  background-color:rgb(255, 255, 255, 0.7);
   border-radius: 30px;
   height: 200px;
   margin-left: 50px;
@@ -37,7 +37,7 @@ body {
 .cons{
   width: 50%;
   float:right;
-  background-color:white;
+  background-color:rgb(255, 255, 255, 0.7);
   border-radius: 30px;
   height: 150px;
   margin-top: 15px;
@@ -56,6 +56,7 @@ body {
   background-color:white;
   height: 400px;*/
   margin-bottom: 400px;
+  margin-left: 40px;
 }
 
 .graph2{
@@ -65,6 +66,7 @@ body {
   /*top:150px;
   background-color:white;
   height: 400px;*/
+  margin-right: 40px;
 
 }
 
@@ -76,8 +78,10 @@ bottom: 16px;
 .stat{
   color: white;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 }
 
 
-
+.titre{
+  color: white;
+}

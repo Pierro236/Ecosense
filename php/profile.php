@@ -127,7 +127,7 @@ if ($_GET) {
         </select>
         <input type="submit" value="Changer la langue">
     </form>
-    <h1 style="text-align:center;">
+    <h1 style="text-align:center;" class="titre">
         <br><br>Ma fréquence cardiaque
     </h1>
 
@@ -143,7 +143,7 @@ if ($_GET) {
         </div>
     </div>
     <div class="cons">
-        <h2 style="text-align:left">&nbsp; Votre fréquence cardiaque est plutot élevée <br>
+        <h2 style="text-align:left" class="texte">&nbsp; Votre fréquence cardiaque est plutot élevée <br>
             &nbsp; Vous pouvez accédez à vos statisques <br>&nbsp; ainsi qu'à l'espace détente plus bas...</h2>
     </div>
 
