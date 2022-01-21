@@ -86,6 +86,7 @@ if ($_GET) {
 
             <label><b><?php echo $lang['mdp']; ?></b></label>
             <input type="password" placeholder=<?php echo $lang['enterpw']; ?> name="password" id="password" required>
+            <p style="color:red; font-size:20px;"> <?php if(isset($_SESSION['mess'])){echo $_SESSION['mess'];} ?></p>
 
             <input type="submit" name="Btncx" id="formlogin" value=<?php echo $lang['connect']; ?>>
 

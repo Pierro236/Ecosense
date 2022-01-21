@@ -96,7 +96,7 @@ if ($_GET) {
 
         <div class="score2">
             <div class="texte">
-                <p>Aujourdhui la salle est particulièrement polué dû au taux de gaz carbonique élevé. La temperature est 2°C supérieur à la moyenne, nous vous conseillons d'aérer. Le niveau sonore est lui conforme aux normes de 62dB. </p>
+                <p>Aujourdhui la salle est particulièrement poluée dû au taux de gaz carbonique élevé. La temperature est 2°C supérieure à la moyenne, nous vous conseillons d'aérer. Le niveau sonore est lui conforme aux normes de 62dB. </p>
             </div>
 
         </div>

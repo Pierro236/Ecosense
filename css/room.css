@@ -20,7 +20,7 @@ body {
  .score{
    width: 30%;
    height: 500px;
-   background-color: rgb(188, 241, 188, 0.6);
+   background-color: rgb(188, 241, 188, 0.75);
    border-radius: 30px;  
    margin-left: 15%;
  }
@@ -35,7 +35,7 @@ body {
    width: 40%; 
    height: 500px;
    margin-left: 10%;
-   background-color: rgb(188, 241, 188, 0.6);
+   background-color: rgb(188, 241, 188, 0.75);
    border-radius: 30px;
    /* display: inline-block; */
  }
@@ -44,7 +44,7 @@ body {
    width: 40%; 
    height: 500px;
    margin-left: 10%;
-   background-color: rgb(188, 241, 188, 0.6);
+   background-color: rgb(188, 241, 188, 0.75);
    border-radius: 30px;
    margin-right: 10%;
  }
@@ -92,7 +92,7 @@ body {
 .score2{
   width: 35%;
   height: 500px;
-  background-color: rgb(188, 241, 188, 0.6);
+  background-color: rgb(188, 241, 188, 0.75);
   border-radius: 30px; 
   margin-left: 10%;
   max-height: 300px;
