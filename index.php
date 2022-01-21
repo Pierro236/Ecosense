@@ -125,7 +125,20 @@ if ($_GET) {
     </div>
     </div>
 
+<<<<<<< HEAD
+
     <script type="text/javascript" id="cookiebanner" src="https://cdnjs.cloudflare.com/ajax/libs/cookie-banner/1.0.0/cookiebanner.min.js" data-position="top" data-fg="#ffffff" data-bg="#3c546b" data-link="#99011e" data-moreinfo="https://www.cookiechoices.org/" data-message="Les cookies assurent le bon fonctionnement de notre site Internet. En utilisant ce dernier, vous acceptez leur utilisation." data-linkmsg="En savoir plus"></script>
+
+    <script src="http://www.example.com/cookiechoices.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(event) {
+            cookieChoices.showCookieConsentBar('Ce site utilise des cookies pour vous offrir le meilleur service. En poursuivant votre navigation, vous acceptez l’utilisation des cookies.', 'J’accepte', 'En savoir plus', 'http://www.example.com/mentions-legales/');
+        });
+    </script>
+
+=======
+    <script type="text/javascript" id="cookiebanner" src="https://cdnjs.cloudflare.com/ajax/libs/cookie-banner/1.0.0/cookiebanner.min.js" data-position="top" data-fg="#ffffff" data-bg="#3c546b" data-link="#99011e" data-moreinfo="https://www.cookiechoices.org/" data-message="Les cookies assurent le bon fonctionnement de notre site Internet. En utilisant ce dernier, vous acceptez leur utilisation." data-linkmsg="En savoir plus"></script>
+>>>>>>> 3e78b303124a4c35cbf5a61c9459d9d46c8c5a30
 </body>
 
 
