@@ -1,6 +1,10 @@
 <?php
 
-session_start() ?>
+session_start();
+if (isset($_SESSION['user_first_name'])) { //if login in session is not set
+    header("Location: php/home.php");
+}
+?>
 
 <?php
 
