@@ -50,6 +50,25 @@ input[name="Btncx"] {
   width: 100%;
 }
 
+input[name="addsalle"] {
+  background-color: #53af57;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+input[name="rmroom"] {
+  background-color: #53af57;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
 #headerform {
   display: flex;
   flex-direction: row;

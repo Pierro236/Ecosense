@@ -1,7 +1,35 @@
 <?php
-session_start()
+session_start();
+if (!isset($_SESSION['user_first_name'])) { //if login in session is not set
+    header("Location: ../index.php");
+}
 ?>
+<?php
 
+include 'config.php';
+
+if (isset($_GET['lang']) && !empty($_GET['lang'])) {
+    if (file_exists('lang/' . $_GET['lang'] . '.php'))
+        require_once('lang/' . htmlentities($_GET['lang']) . '.php');
+    else
+        require_once('../lang/fr.php');
+} /*else if (file_exists('lang/' . $_SERVEUR['HTTP_ACCEPT_LANGUAGE'] . '.php')) {
+    require_once('lang/' . htmlentities($_SERVEUR['HTTP_ACCEPT_LANGUAGE']) . '.php');
+}*/ else {
+    require_once('../lang/fr.php');
+}
+
+if ($_GET) {
+    $_GET['lang'] = $_GET['lang'];
+
+
+    /*if (!empty($num) and !empty($destination)) {
+        $db->exec("INSERT INTO table_base(num,destination) VALUES ('$num','$destination')");
+    } else echo "<strong>Un ou plusieurs champs n'ont pas été renseignés. Réessayez en remplissant l'entièreté du formulaire.</strong>";*/
+}
+
+
+?>
 
 
 
@@ -28,19 +56,51 @@ session_start()
         <img class="ilog" src="../img/logo.png" alt="logo" />
         <a href="home.php"> <img class="ht" src="../img/heart.png" width="10%" /></a>
         <a class="home" href="home.php">Accueil</a>
-        <a class="name" href="profile.php">Mon profil</a>
+        <?php
+        if ($_SESSION['role'] == 'user') {
+            echo '      
+                <a class="name" href="profile.php">' . $_SESSION['user_first_name'] . '</a>
+                ';
+        }
 
+        if ($_SESSION['role'] == 'admin') {
+            echo '      
+                <a class="home" href="registration.php">Administration</a>
+                ';
+        }
+        ?>
+        <a href="logout.php" class="home">Déconnecter</a>
     </div>
 
 
     <div class="wrap">
         <div class="search">
-            <input type="text" class="searchTerm" placeholder="Recherchez une salle">
+            <select name="pets" id="pet-select">
+                <option value=""> Sélectionnez une salle </option>
+                <?php
+                $sql = $db->prepare('SELECT room_name FROM room');
+                $sql->execute();
+                $rooms = $sql->fetchAll(PDO::FETCH_COLUMN);
+                for ($i = 0; $i < count($rooms); $i++) {
+                    echo '<option value="' . $rooms[$i] . '">' . $rooms[$i] . '</option>';
+                }
+
+
+
+
+                ?>
+            </select>
             <a class="searchButton" href="room.php"><img class="photo" src="../img/loupe.png" /></a>
         </div>
     </div>
 
-
+    <form method="GET" action="">
+        <select id="lang" name="lang">
+            <option value="fr">Francais</option>
+            <option value="en">English</option>
+        </select>
+        <input type="submit" value="Envoyer">
+    </form>
 
     <div class="footer">
         <div class="contain">
