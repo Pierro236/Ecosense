@@ -80,7 +80,7 @@ if ($_GET) {
 
         <form id="registration" action="adduser.php" method="POST">
             <div id="headerform">
-                <p class="name"><?php echo $lang['Login']; ?></p>
+                <p class="name">Création d'un compte</p>
                 <img src="../img/logo.png" alt="logo" class="logo">
 
 
