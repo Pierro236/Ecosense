@@ -84,7 +84,7 @@ if ($_GET) {
             <ul>Inspirez profondement 5 secondes.</ul>
             <ul>Retenez votre respiration 10 secondes.</ul>
             <ul>Expirez pendant 5 ou 6 secondes.</ul>
-            <ul>Répétez l'operation jusqu'à ce que vous vous sentiez détendu et que votre BPM passe en dessous de 75</ul>
+            <ul>Répétez l'opération jusqu'à ce que vous vous sentiez détendu et que votre BPM passe en dessous de 75.</ul>
             </p>
         </div>
 
