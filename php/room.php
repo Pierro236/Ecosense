@@ -89,11 +89,14 @@ if ($_GET) {
                 Score de la salle
             </div>
             <img class="score1" src="../img/diagramme-circulaire.png" alt="">
+            <div class="description1">
+                <p>Le score de la salle est: 70/100</p>
+            </div>
         </div>
 
         <div class="score2">
             <div class="texte">
-                <p>Equitis Romani autem esse filium criminis loco poni ab accusatoribus neque his iudicantibus oportuit neque defendentibus nobis. Nam quod de pietate dixistis, est quidem ista nostra existimatio, sed iudicium certe parentis; quid nos opinemur, audietis ex iuratis; quid parentes sentiant, lacrimae matris incredibilisque maeror, squalor patris et haec praesens maestitia, quam cernitis, luctusque declarat.</p>
+                <p>Aujourdhui la salle est particulièrement polué dû au taux de gaz carbonique élevé. La temperature est 2°C supérieur à la moyenne, nous vous conseillons d'aérer. Le niveau sonore est lui conforme aux normes de 62dB. </p>
             </div>
 
         </div>
@@ -106,6 +109,9 @@ if ($_GET) {
                 Niveau sonore
             </div>
             <img class="sound1" src="../img/les-ondes-sonores.png" alt="">
+            <div>
+                <p class="description2">Le niveau sonore actuel de la salle est: 62dB</p>
+            </div>
         </div>
 
         <div class="cod">
