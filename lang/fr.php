@@ -3,7 +3,7 @@
 $lang = array(
 
     'title' => 'Bienvenue sur le site EcoSense',
-    'Login' => 'Veuillez vous connectez',
+    'Login' => 'Veuillez vous connecter',
     'mdp' => 'Mot de Passe',
     'username' => "Adresse mail",
     'enterid' => "Email",

@@ -20,9 +20,9 @@ body {
  .score{
    width: 30%;
    height: 500px;
-   background-color: white;
+   background-color: rgb(188, 241, 188, 0.75);
    border-radius: 30px;  
-   margin-left: 10%;
+   margin-left: 15%;
  }
   
  .titre{
@@ -35,7 +35,7 @@ body {
    width: 40%; 
    height: 500px;
    margin-left: 10%;
-   background-color: rgb(188, 241, 188, 0.6);
+   background-color: rgb(188, 241, 188, 0.75);
    border-radius: 30px;
    /* display: inline-block; */
  }
@@ -44,7 +44,7 @@ body {
    width: 40%; 
    height: 500px;
    margin-left: 10%;
-   background-color: rgb(188, 241, 188, 0.6);
+   background-color: rgb(188, 241, 188, 0.75);
    border-radius: 30px;
    margin-right: 10%;
  }
@@ -53,27 +53,35 @@ body {
   float:right;
   width: 90%;
   height: 70%;
-  padding-right: 20px;
-  padding-top: 20px
+  padding-right: 50px;
+  padding-top: 20px;
+  max-height: 55%;
+  max-width: 70%;
 }
 
 .sound1{
   float:right;
   width: 80%;
   height: 75%;
-  padding-right: 40px;
+  padding-right: 60px;
   padding-top: 40px;
+  max-width: 70%;
+  max-height: 60%;
 }
 
 .cod2{
   float:right;
   width: 100%;
   height: 75%;
-  padding-top: 40px;
+  padding-top: 30px;
+  max-height: 55%;
+  max-width: 60%;
+  padding-right: 85px;
 }
 
 .align{
   display: flex;
+  text-align: left;
 }
 
 .align2{
@@ -82,13 +90,78 @@ body {
 }
 
 .score2{
-  width: 40%;
+  width: 35%;
   height: 500px;
-  background-color: rgb(188, 241, 188, 0.6);
+  background-color: rgb(188, 241, 188, 0.75);
   border-radius: 30px; 
   margin-left: 10%;
+  max-height: 300px;
+  margin-top: 8%;
+
 }
- 
+
 .texte{
-  text-align: center;
+  padding-top: 90px;
+  width: 75%;
+  padding-left: 50px;
+}
+
+.description1{
+  position: absolute;
+  padding-left: 25px;
+  padding-top: 350px;
+  
+}
+.description2{
+padding-left: 25px;
+padding-top: 380px;
+padding-bottom: 15px;
+}
+
+.description3{
+  padding-top: 375px;
+  padding-left: 25px;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  height: auto;
+  background-color: #070617;
+  flex: 1.2;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer .col {
+  width: 190px;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0px 20px 20px 20px;
+
+}
+
+.footer .col h1 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 12px;
+  line-height: 17px;
+  padding: 20px 0px 5px 0px;
+  color: #ffff;
+  font-weight:normal;
+  text-transform: uppercase;
+  letter-spacing: 0.250em;
+  
+}
+
+.footer .col  :hover{
+  color:#ffff;
+  transition: .1s;
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  font-weight:bolder;
 }

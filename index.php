@@ -1,6 +1,10 @@
 <?php
 
-session_start() ?>
+session_start();
+if (isset($_SESSION['user_first_name'])) { //if login in session is not set
+    header("Location: php/home.php");
+}
+?>
 
 <?php
 
@@ -82,6 +86,7 @@ if ($_GET) {
 
             <label><b><?php echo $lang['mdp']; ?></b></label>
             <input type="password" placeholder=<?php echo $lang['enterpw']; ?> name="password" id="password" required>
+            <p style="color:red; font-size:20px;"> <?php if(isset($_SESSION['mess'])){echo $_SESSION['mess'];} ?></p>
 
             <input type="submit" name="Btncx" id="formlogin" value=<?php echo $lang['connect']; ?>>
 
