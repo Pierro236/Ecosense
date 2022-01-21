@@ -143,8 +143,8 @@ if ($_GET) {
         </div>
     </div>
     <div class="cons">
-        <h2 style="text-align:left" class="texte">&nbsp; Votre fréquence cardiaque est plutot élevée <br>
-            &nbsp; Vous pouvez accédez à vos statisques <br>&nbsp; ainsi qu'à l'espace détente plus bas...</h2>
+        <h2 style="text-align:left" class="texte">&nbsp; Votre fréquence cardiaque est plutôt élevée <br>
+            &nbsp; Vous pouvez accéder à vos statisques <br>&nbsp; ainsi qu'à l'espace détente plus bas...</h2>
     </div>
 
     <h1 class="stat">
@@ -162,6 +162,35 @@ if ($_GET) {
         </button>
     </a>
 
+    
+
 </body>
+
+<div class="footer">
+        <div class="contain">
+
+            <div class="col">
+                <a style="text-decoration:none" href="FAQ.html">
+                    <h1>FAQ</h1>
+                </a>
+
+            </div>
+            <div class="col">
+                <a style="text-decoration:none" href="CGU.html">
+                    <h1>CGU</h1>
+                </a>
+
+            </div>
+
+            <div class="col">
+                <a style="text-decoration:none" href="mailto:pierre.sedo@eleve.isep.fr, robin.lerda@eleve.isep.fr, julien.godfroy@eleve.isep.fr, francois.hascoat@eleve.isep.fr,timothe.bonnel@eleve.isep.fr, gabriel.hercaud@eleve.isep.fr">
+                    <h1>contact@ecosense.com</h1>
+                </a>
+
+            </div>
+
+
+        </div>
+    </div>
 
 </html>
