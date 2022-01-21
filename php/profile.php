@@ -162,11 +162,7 @@ if ($_GET) {
         </button>
     </a>
 
-    
-
-</body>
-
-<div class="footer">
+    <div class="footer">
         <div class="contain">
 
             <div class="col">
@@ -192,5 +188,9 @@ if ($_GET) {
 
         </div>
     </div>
+
+</body>
+
+
 
 </html>

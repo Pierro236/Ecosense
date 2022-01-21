@@ -126,34 +126,34 @@ if ($_GET) {
     </div>
 
     
-
+    <div class="footer">
+            <div class="contain">
+    
+                <div class="col">
+                    <a style="text-decoration:none" href="FAQ.html">
+                        <h1>FAQ</h1>
+                    </a>
+    
+                </div>
+                <div class="col">
+                    <a style="text-decoration:none" href="CGU.html">
+                        <h1>CGU</h1>
+                    </a>
+    
+                </div>
+    
+                <div class="col">
+                    <a style="text-decoration:none" href="mailto:pierre.sedo@eleve.isep.fr, robin.lerda@eleve.isep.fr, julien.godfroy@eleve.isep.fr, francois.hascoat@eleve.isep.fr,timothe.bonnel@eleve.isep.fr, gabriel.hercaud@eleve.isep.fr">
+                        <h1>contact@ecosense.com</h1>
+                    </a>
+    
+                </div>
+    
+    
+            </div>
+        </div>
+    
 </body>
 
-<div class="footer">
-        <div class="contain">
-
-            <div class="col">
-                <a style="text-decoration:none" href="FAQ.html">
-                    <h1>FAQ</h1>
-                </a>
-
-            </div>
-            <div class="col">
-                <a style="text-decoration:none" href="CGU.html">
-                    <h1>CGU</h1>
-                </a>
-
-            </div>
-
-            <div class="col">
-                <a style="text-decoration:none" href="mailto:pierre.sedo@eleve.isep.fr, robin.lerda@eleve.isep.fr, julien.godfroy@eleve.isep.fr, francois.hascoat@eleve.isep.fr,timothe.bonnel@eleve.isep.fr, gabriel.hercaud@eleve.isep.fr">
-                    <h1>contact@ecosense.com</h1>
-                </a>
-
-            </div>
-
-
-        </div>
-    </div>
 
 </html>
