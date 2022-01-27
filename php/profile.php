@@ -200,6 +200,14 @@ if ($_GET) {
 
         </div>
     </div>
+    <script>
+        setInterval('load_messages()', 2000);
+        function load_messages() {
+            $('.aff').load('loaddiv.php');
+        };
+    </script>
+    
+
 
 </body>
 
