@@ -26,6 +26,12 @@ if ($_GET) {
 }
 
 
+
+
+extract($_POST);
+
+$room_selected = $_POST['roomselect']; //recuperele nom de la salle
+
 ?>
 
 
@@ -79,7 +85,10 @@ if ($_GET) {
     </form>
 
     <h1 class="bvn">
-        Bienvenue dans la salle 1
+        <?php
+        echo '
+        Bienvenue dans la salle ' . $room_selected . ''
+        ?>
     </h1>
 
 
@@ -125,34 +134,34 @@ if ($_GET) {
         </div>
     </div>
 
-    
+
     <div class="footer">
-            <div class="contain">
-    
-                <div class="col">
-                    <a style="text-decoration:none" href="FAQ.html">
-                        <h1>FAQ</h1>
-                    </a>
-    
-                </div>
-                <div class="col">
-                    <a style="text-decoration:none" href="CGU.html">
-                        <h1>CGU</h1>
-                    </a>
-    
-                </div>
-    
-                <div class="col">
-                    <a style="text-decoration:none" href="mailto:pierre.sedo@eleve.isep.fr, robin.lerda@eleve.isep.fr, julien.godfroy@eleve.isep.fr, francois.hascoat@eleve.isep.fr,timothe.bonnel@eleve.isep.fr, gabriel.hercaud@eleve.isep.fr">
-                        <h1>contact@ecosense.com</h1>
-                    </a>
-    
-                </div>
-    
-    
+        <div class="contain">
+
+            <div class="col">
+                <a style="text-decoration:none" href="FAQ.html">
+                    <h1>FAQ</h1>
+                </a>
+
             </div>
+            <div class="col">
+                <a style="text-decoration:none" href="CGU.html">
+                    <h1>CGU</h1>
+                </a>
+
+            </div>
+
+            <div class="col">
+                <a style="text-decoration:none" href="mailto:pierre.sedo@eleve.isep.fr, robin.lerda@eleve.isep.fr, julien.godfroy@eleve.isep.fr, francois.hascoat@eleve.isep.fr,timothe.bonnel@eleve.isep.fr, gabriel.hercaud@eleve.isep.fr">
+                    <h1>contact@ecosense.com</h1>
+                </a>
+
+            </div>
+
+
         </div>
-    
+    </div>
+
 </body>
 
 

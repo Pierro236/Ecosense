@@ -86,7 +86,9 @@ if ($_GET) {
 
             <label><b><?php echo $lang['mdp']; ?></b></label>
             <input type="password" placeholder=<?php echo $lang['enterpw']; ?> name="password" id="password" required>
-            <p style="color:red; font-size:20px;"> <?php if(isset($_SESSION['mess'])){echo $_SESSION['mess'];} ?></p>
+            <p style="color:red; font-size:20px;"> <?php if (isset($_SESSION['mess'])) {
+                                                        echo $_SESSION['mess'];
+                                                    } ?></p>
 
             <input type="submit" name="Btncx" id="formlogin" value=<?php echo $lang['connect']; ?>>
 
@@ -125,7 +127,6 @@ if ($_GET) {
     </div>
     </div>
 
-<<<<<<< HEAD
 
     <script type="text/javascript" id="cookiebanner" src="https://cdnjs.cloudflare.com/ajax/libs/cookie-banner/1.0.0/cookiebanner.min.js" data-position="top" data-fg="#ffffff" data-bg="#3c546b" data-link="#99011e" data-moreinfo="https://www.cookiechoices.org/" data-message="Les cookies assurent le bon fonctionnement de notre site Internet. En utilisant ce dernier, vous acceptez leur utilisation." data-linkmsg="En savoir plus"></script>
 
@@ -136,9 +137,6 @@ if ($_GET) {
         });
     </script>
 
-=======
-    <script type="text/javascript" id="cookiebanner" src="https://cdnjs.cloudflare.com/ajax/libs/cookie-banner/1.0.0/cookiebanner.min.js" data-position="top" data-fg="#ffffff" data-bg="#3c546b" data-link="#99011e" data-moreinfo="https://www.cookiechoices.org/" data-message="Les cookies assurent le bon fonctionnement de notre site Internet. En utilisant ce dernier, vous acceptez leur utilisation." data-linkmsg="En savoir plus"></script>
->>>>>>> 3e78b303124a4c35cbf5a61c9459d9d46c8c5a30
 </body>
 
 

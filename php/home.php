@@ -75,22 +75,23 @@ if ($_GET) {
 
     <div class="wrap">
         <div class="search">
-            <select name="pets" id="pet-select">
-                <option value=""> Sélectionnez une salle </option>
-                <?php
-                $sql = $db->prepare('SELECT room_name FROM room');
-                $sql->execute();
-                $rooms = $sql->fetchAll(PDO::FETCH_COLUMN);
-                for ($i = 0; $i < count($rooms); $i++) {
-                    echo '<option value="' . $rooms[$i] . '">' . $rooms[$i] . '</option>';
-                }
+            <form id="roomselect" action="room.php" method="POST">
+                <select name="roomselect" id="roomselect">
+                    <option value=""> Sélectionnez une salle </option>
 
+                    <?php
+                    $sql = $db->prepare('SELECT room_name FROM room');
+                    $sql->execute();
+                    $rooms = $sql->fetchAll(PDO::FETCH_COLUMN);
+                    for ($i = 0; $i < count($rooms); $i++) {
+                        echo '<option value="' . $rooms[$i] . '">' . $rooms[$i] . '</option>';
+                    }
+                    ?>
 
+                </select>
+                <input type="submit" name="btnvalidate" value='Valider' id="btnvalidate">
+            </form>
 
-
-                ?>
-            </select>
-            <a class="searchButton" href="room.php"><img class="photo" src="../img/loupe.png" /></a>
         </div>
     </div>
 
