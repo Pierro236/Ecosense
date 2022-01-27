@@ -1,5 +1,5 @@
 body {
-  background: url("../img/Office.jpg") no-repeat center center fixed;
+  background: url("../img/Office.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -33,7 +33,6 @@ body {
   text-decoration: none;
   width: 50px;
   height: 30px;
-
 }
 
 .wrap {
@@ -44,14 +43,11 @@ body {
   transform: translate(-50%, -50%);
 }
 
-
 body {
-
-  margin:0;
-  padding:0;
-  height:100%;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
-
 
 /* debut footer*/
 .footer {
@@ -62,7 +58,6 @@ body {
   flex: 1.2;
   position: absolute;
   bottom: 0;
- 
 }
 .footer .col {
   width: 190px;
@@ -72,7 +67,6 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   padding: 0px 20px 20px 20px;
-
 }
 .footer .col h1 {
   margin: 0;
@@ -82,41 +76,37 @@ body {
   line-height: 17px;
   padding: 20px 0px 5px 0px;
   color: #ffff;
-  font-weight:normal;
+  font-weight: normal;
   text-transform: uppercase;
-  letter-spacing: 0.250em;
-  
+  letter-spacing: 0.25em;
 }
 
 .clearfix {
   clear: both;
 }
 
-  
-  
-.footer .col  :hover{
-  color:#ffff;
-  transition: .1s;
-  -webkit-transition: .1s;
-  -moz-transition: .1s;
-  font-weight:bolder;
+.footer .col :hover {
+  color: #ffff;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  font-weight: bolder;
 }
 
-.photo{
+.photo {
   height: 30px;
-  width: 30px  ;
+  width: 30px;
 }
 
-.ES{
+.ES {
   margin-bottom: 20px;
 }
 
-.ht{
-  position:relative;
+.ht {
+  position: relative;
   bottom: 25px;
-
 }
-  
-#pet-select{
+
+#pet-select {
   border-radius: 40px 0% 0% 40px;
 }
