@@ -107,7 +107,7 @@ if ($_GET) {
         <div class="contain">
 
             <div class="col">
-                <a style="text-decoration:none" href="FAQ.html">
+                <a style="text-decoration:none" href="FAQ.php">
                     <h1>FAQ</h1>
                 </a>
 
