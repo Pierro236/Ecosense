@@ -112,7 +112,7 @@ if ($_GET) {
             </div>
             <div class="col">
                 <a href="php\CGU.html" style="text-decoration:none">
-                    <h1>CGU</h1>
+                    <h1><?php echo $lang['CGU']; ?></h1>
                 </a>
 
             </div>

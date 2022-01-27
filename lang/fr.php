@@ -9,5 +9,6 @@ $lang = array(
     'enterid' => "Email",
     'enterpw' => 'MotDePasse',
     'connect' => 'Connexion',
+    'CGU' => 'CGU',
 
 );

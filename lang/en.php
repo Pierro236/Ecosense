@@ -10,4 +10,5 @@ $lang = array(
     'enterid' => "Mail",
     'enterpw' => 'Password',
     'connect' => 'Connect',
+    'CGU' => 'TCU',
 );
