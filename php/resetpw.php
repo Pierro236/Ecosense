@@ -3,6 +3,9 @@ session_start();
 if (!isset($_SESSION['user_first_name'])) { //if login in session is not set
     header("Location: ../index.php");
 }
+?>
+<?php
+
 include 'config.php';
 
 if (isset($_GET['lang']) && !empty($_GET['lang'])) {
@@ -25,7 +28,6 @@ if ($_GET) {
     } else echo "<strong>Un ou plusieurs champs n'ont pas été renseignés. Réessayez en remplissant l'entièreté du formulaire.</strong>";*/
 }
 
-
 ?>
 
 
@@ -36,9 +38,15 @@ if ($_GET) {
 <head>
     <meta charset="utf-8" />
     <title>EcoSense | Accueil</title>
-    <link rel="stylesheet" href="../css/playful.css" />
+    <link rel="stylesheet" href="../css/home.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/registration.css" />
     <link rel="icon" type="image/jpg" href="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+
+
 </head>
 
 <body>
@@ -46,7 +54,7 @@ if ($_GET) {
 
     <div class="navbar">
         <img class="ilog" src="../img/logo.png" alt="logo" />
-        <a class="ES"> EcoSense</a>
+        <a href="home.php"> <img class="ht" src="../img/heart.png" width="10%" /></a>
         <a class="home" href="home.php">Accueil</a>
         <?php
         if ($_SESSION['role'] == 'user') {
@@ -64,6 +72,9 @@ if ($_GET) {
         <a href="logout.php" class="home">Déconnecter</a>
     </div>
 
+
+
+
     <form method="GET" action="">
         <select id="lang" name="lang">
             <option value="fr">Francais</option>
@@ -72,42 +83,33 @@ if ($_GET) {
         <input type="submit" value="Envoyer">
     </form>
 
-    <div class="contenu">
 
-        <div class="paragraphe">
-            <div class='titre'>
-                <h1>Exercice du jour</h1>
+    <div id="container">
+
+
+        <form id="registration" action="resetpwscript.php" method="POST">
+            <div id="headerform">
+                <p class="name">Modifier votre mot de passe</p>
+                <img src="../img/logo.png" alt="logo" class="logo">
+
 
             </div>
-            <p>
-            <ul>Commencez par respirer lentement.</ul>
-            <ul>Inspirez profondement 5 secondes.</ul>
-            <ul>Retenez votre respiration 10 secondes.</ul>
-            <ul>Expirez pendant 5 ou 6 secondes.</ul>
-            <ul>Répétez l'opération jusqu'à ce que vous vous sentiez détendu et que votre BPM passe en dessous de 75.</ul>
-            </p>
-        </div>
 
-        <div class="cardio">
-            <h2 style="text-align:center"> Rythme cardiaque </h2>
-            <img class="heart" src="../img/heart.png" alt="heart" />
-
-            <h2 style="font-size:50px;">&nbsp; 126 </h2>
-
-            <div class="bpm"> BPM </div>
-        </div>
+            <label><b>Mot de passe actuel</b></label>
+            <input type="password" placeholder="Mot de passe actuel" name="actualpw" id="actualpw" required>
+            <label><b>Nouveau mot de passe</b></label>
+            <input type="password" placeholder="Nouveau mot de passe" name="newpw" id="newpw" required>
+            <label><b>Confirmation de mot de passe</b></label>
+            <input type="password" placeholder="Confirmation de mot de passe" name="confirmpw" id="confirmpw" required>
+            <?php if (isset($_SESSION['mess'])) {
+                echo $_SESSION['mess'];
+                unset($_SESSION['mess']);
+            } ?>
+            <input type="submit" name="Btncx" value='Modifier votre mot de passe' id="password">
 
 
-
-
+        </form>
     </div>
-
-    <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/jVij0mLmMGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-
-
 
 
 
@@ -116,13 +118,13 @@ if ($_GET) {
         <div class="contain">
 
             <div class="col">
-                <a style="text-decoration:none" href="FAQ.html">
+                <a style="text-decoration:none" href="FAQ.php">
                     <h1>FAQ</h1>
                 </a>
 
             </div>
             <div class="col">
-                <a style="text-decoration: none" href="CGU.html">
+                <a style="text-decoration:none" href="CGU.html">
                     <h1>CGU</h1>
                 </a>
 
@@ -144,11 +146,8 @@ if ($_GET) {
 
         </div>
     </div>
-
-
-
-
-
 </body>
+
+
 
 </html>

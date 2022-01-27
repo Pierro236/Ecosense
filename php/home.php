@@ -126,6 +126,13 @@ if ($_GET) {
 
             </div>
 
+            <div class="col">
+                <a style="text-decoration:none" href="resetpw.php">
+                    <h1>Modifiez votre mot de passe</h1>
+                </a>
+
+            </div>
+
 
         </div>
     </div>

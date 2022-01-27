@@ -157,6 +157,12 @@ $room_selected = $_POST['roomselect']; //recuperele nom de la salle
                 </a>
 
             </div>
+            <div class="col">
+                <a style="text-decoration:none" href="resetpw.php">
+                    <h1>Modifiez votre mot de passe</h1>
+                </a>
+
+            </div>
 
 
         </div>
