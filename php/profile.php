@@ -34,7 +34,7 @@ if ($_GET) {
 <html>
 
 <head>
-    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>EcoSense | Accueil</title>
     <link rel="stylesheet" href="../css/profile.css" />
     <link rel="icon" type="image/jpg" href="" />
@@ -136,10 +136,16 @@ if ($_GET) {
         <img class="heart" src="../img/heart.png" alt="heart" />
 
 
-        <div class="aff">
-            <h2 style="font-size:50px;">&nbsp; 126 </h2>
+       <div  class="aff">
+           <?php
+                function nbr() {
 
-            <div class="bpm"> BPM </div>
+                    $nombre = random_int(60, 75);
+                    echo $nombre;
+                };
+                 nbr();
+
+           ?>
         </div>
     </div>
     <div class="cons">
