@@ -61,9 +61,8 @@ body {
 }
 
 .aff {
-top: 3px;
-font-size: 40px;
-
+  top: 3px;
+  font-size: 40px;
 }
 
 .stat {
@@ -105,7 +104,7 @@ font-size: 40px;
   color: #ffff;
   font-weight: normal;
   text-transform: uppercase;
-  letter-spacing: 0.25em;
+  letter-spacing: 0em;
 }
 
 .footer .col :hover {
