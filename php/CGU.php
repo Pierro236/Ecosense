@@ -39,8 +39,9 @@ if ($_GET) {
 <head>
     <meta charset="utf-8" />
     <title>EcoSense | Accueil</title>
-    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
     <link rel="stylesheet" href="../css/navbar.css" />
+
     <link rel="icon" type="image/jpg" href="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
@@ -217,7 +218,7 @@ if ($_GET) {
 
             </div>
             <div class="col">
-                <a style="text-decoration:none" href="CGU.html">
+                <a style="text-decoration:none" href="CGU.php">
                     <h1>CGU</h1>
                 </a>
 

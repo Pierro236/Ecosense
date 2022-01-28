@@ -72,7 +72,7 @@ if ($_GET) {
         <a href="logout.php" class="home">Déconnecter</a>
     </div>
 
-    <div style="padding-left: 100px ">
+    <div style="padding-left: 100px; padding-top: 50px;  ">
 
         <ul>
             <li style=" color:black; text-align:left; font-size: 30px;padding-top: 30px;">
@@ -114,7 +114,7 @@ if ($_GET) {
 
             </div>
             <div class="col">
-                <a style="text-decoration:none" href="CGU.html">
+                <a style="text-decoration:none" href="CGU.php">
                     <h1>CGU</h1>
                 </a>
 

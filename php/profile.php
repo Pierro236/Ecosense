@@ -136,16 +136,17 @@ if ($_GET) {
         <img class="heart" src="../img/heart.png" alt="heart" />
 
 
-       <div  class="aff">
-           <?php
-                function nbr() {
+        <div class="aff">
+            <?php
+            function nbr()
+            {
 
-                    $nombre = random_int(60, 75);
-                    echo $nombre;
-                };
-                 nbr();
+                $nombre = random_int(60, 75);
+                echo $nombre;
+            };
+            nbr();
 
-           ?>
+            ?>
         </div>
     </div>
     <div class="cons">
@@ -178,7 +179,7 @@ if ($_GET) {
 
             </div>
             <div class="col">
-                <a style="text-decoration:none" href="CGU.html">
+                <a style="text-decoration:none" href="CGU.php">
                     <h1>CGU</h1>
                 </a>
 
@@ -202,11 +203,12 @@ if ($_GET) {
     </div>
     <script>
         setInterval('load_messages()', 2000);
+
         function load_messages() {
             $('.aff').load('loaddiv.php');
         };
     </script>
-    
+
 
 
 </body>

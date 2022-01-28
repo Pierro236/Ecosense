@@ -122,7 +122,7 @@ if ($_GET) {
 
             </div>
             <div class="col">
-                <a style="text-decoration: none" href="CGU.html">
+                <a style="text-decoration: none" href="CGU.php">
                     <h1>CGU</h1>
                 </a>
 
