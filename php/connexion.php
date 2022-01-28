@@ -32,16 +32,16 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                     $_SESSION['role'] = 'admin';
                 }
                 header('Location:home.php');
-            } else{
+            } else {
                 $_SESSION['mess'] = "Mot de passe incorrect !";
                 header('Location:../index.php');
-            } ;
-        } else{
-                $_SESSION['mess'] = "Adresse email non reconnue!";
-                header('Location:../index.php');
-            } ;
-    } else{
-                $_SESSION['mess'] = "Compte non existant!";
-                header('Location:../index.php');
-            } ;
+            };
+        } else {
+            $_SESSION['mess'] = "Adresse email non reconnue!";
+            header('Location:../index.php');
+        };
+    } else {
+        $_SESSION['mess'] = "Compte non existant!";
+        header('Location:../index.php');
+    };
 } else header('Location:index.php');

@@ -39,6 +39,7 @@ if ($_GET) {
     <link rel="stylesheet" href="../css/registration.css" />
     <link rel="icon" type="image/jpg" href="" />
     <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
 </head>
 
 <body>
@@ -160,6 +161,38 @@ if ($_GET) {
 
 
 
+    </div>
+    <div class="footer">
+        <div class="contain">
+
+            <div class="col">
+                <a style="text-decoration:none" href="FAQ.php">
+                    <h1>FAQ</h1>
+                </a>
+
+            </div>
+            <div class="col">
+                <a style="text-decoration:none" href="CGU.php">
+                    <h1>CGU</h1>
+                </a>
+
+            </div>
+
+            <div class="col">
+                <a style="text-decoration:none" href="mailto:pierre.sedo@eleve.isep.fr, robin.lerda@eleve.isep.fr, julien.godfroy@eleve.isep.fr, francois.hascoat@eleve.isep.fr,timothe.bonnel@eleve.isep.fr, gabriel.hercaud@eleve.isep.fr">
+                    <h1>contact@ecosense.com</h1>
+                </a>
+
+            </div>
+            <div class="col">
+                <a style="text-decoration:none" href="resetpw.php">
+                    <h1>Modifiez votre mot de passe</h1>
+                </a>
+
+            </div>
+
+
+        </div>
     </div>
 
 </body>

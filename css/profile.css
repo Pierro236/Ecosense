@@ -1,5 +1,5 @@
 body {
-  background: url("../img/Office.jpg") no-repeat center center fixed;
+  background: url("../img/Office.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -7,51 +7,42 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
-
-
-
 .cardio {
   width: 20%;
-  float:left;
-  background-color:rgb(255, 255, 255, 0.7);
+  float: left;
+  background-color: rgb(255, 255, 255, 0.7);
   border-radius: 30px;
   height: 200px;
   margin-left: 160px;
-
 }
 
-.heart{
-  float:right;
+.heart {
+  float: right;
   width: 100px;
   height: 100px;
-
 }
 
-.bpm{
-  position:relative;
+.bpm {
+  position: relative;
   left: 60px;
   bottom: 40px;
   margin-top: 10px;
 }
 
-.cons{
+.cons {
   width: 50%;
-  float:right;
-  background-color:rgb(255, 255, 255, 0.7);
+  float: right;
+  background-color: rgb(255, 255, 255, 0.7);
   border-radius: 30px;
   height: 150px;
   margin-top: 15px;
-  
 }
-  
-.graph1{
 
- 
-
- /* position:relative;
+.graph1 {
+  /* position:relative;
 
   width:40%;*/
-  float:left;
+  float: left;
   /*top:150px;
   background-color:white;
   height: 400px;*/
@@ -59,31 +50,30 @@ body {
   margin-left: 40px;
 }
 
-.graph2{
+.graph2 {
   /*position:relative;
   width:40%;*/
-  float:right;
+  float: right;
   /*top:150px;
   background-color:white;
   height: 400px;*/
   margin-right: 40px;
+}
+
+.aff {
+top: 3px;
+font-size: 40px;
 
 }
 
-
-.aff{position: relative;
-bottom: 16px;
-}
-
-.stat{
-  color: white;
+.stat {
+  color: black;
   text-align: center;
   margin-bottom: 60px;
 }
 
-
-.titre{
-  color: white;
+.titre {
+  color: black;
   margin-bottom: 50px;
 }
 
@@ -103,7 +93,6 @@ bottom: 16px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   padding: 0px 20px 20px 20px;
-
 }
 
 .footer .col h1 {
@@ -114,17 +103,15 @@ bottom: 16px;
   line-height: 17px;
   padding: 20px 0px 5px 0px;
   color: #ffff;
-  font-weight:normal;
+  font-weight: normal;
   text-transform: uppercase;
-  letter-spacing: 0.250em;
-  
+  letter-spacing: 0.25em;
 }
 
-.footer .col  :hover{
-  color:#ffff;
-  transition: .1s;
-  -webkit-transition: .1s;
-  -moz-transition: .1s;
-  font-weight:bolder;
+.footer .col :hover {
+  color: #ffff;
+  transition: 0.1s;
+  -webkit-transition: 0.1s;
+  -moz-transition: 0.1s;
+  font-weight: bolder;
 }
-

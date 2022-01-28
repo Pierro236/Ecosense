@@ -122,7 +122,7 @@ if ($_GET) {
 
             </div>
             <div class="col">
-                <a style="text-decoration: none" href="CGU.html">
+                <a style="text-decoration: none" href="CGU.php">
                     <h1>CGU</h1>
                 </a>
 
@@ -131,6 +131,12 @@ if ($_GET) {
             <div class="col">
                 <a style="text-decoration:none" href="mailto:pierre.sedo@eleve.isep.fr, robin.lerda@eleve.isep.fr, julien.godfroy@eleve.isep.fr, francois.hascoat@eleve.isep.fr,timothe.bonnel@eleve.isep.fr, gabriel.hercaud@eleve.isep.fr">
                     <h1>contact@ecosense.com</h1>
+                </a>
+
+            </div>
+            <div class="col">
+                <a style="text-decoration:none" href="resetpw.php">
+                    <h1>Modifiez votre mot de passe</h1>
                 </a>
 
             </div>

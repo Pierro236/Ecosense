@@ -75,22 +75,23 @@ if ($_GET) {
 
     <div class="wrap">
         <div class="search">
-            <select name="pets" id="pet-select">
-                <option value=""> Sélectionnez une salle </option>
-                <?php
-                $sql = $db->prepare('SELECT room_name FROM room');
-                $sql->execute();
-                $rooms = $sql->fetchAll(PDO::FETCH_COLUMN);
-                for ($i = 0; $i < count($rooms); $i++) {
-                    echo '<option value="' . $rooms[$i] . '">' . $rooms[$i] . '</option>';
-                }
+            <form id="roomselect" action="room.php" method="POST">
+                <select name="roomselect" id="roomselect">
+                    <option value=""> Sélectionnez une salle </option>
 
+                    <?php
+                    $sql = $db->prepare('SELECT room_name FROM room');
+                    $sql->execute();
+                    $rooms = $sql->fetchAll(PDO::FETCH_COLUMN);
+                    for ($i = 0; $i < count($rooms); $i++) {
+                        echo '<option value="' . $rooms[$i] . '">' . $rooms[$i] . '</option>';
+                    }
+                    ?>
 
+                </select>
+                <input type="submit" name="btnvalidate" value='Valider' id="btnvalidate">
+            </form>
 
-
-                ?>
-            </select>
-            <a class="searchButton" href="room.php"><img class="photo" src="../img/loupe.png" /></a>
         </div>
     </div>
 
@@ -106,13 +107,13 @@ if ($_GET) {
         <div class="contain">
 
             <div class="col">
-                <a style="text-decoration:none" href="FAQ.html">
+                <a style="text-decoration:none" href="FAQ.php">
                     <h1>FAQ</h1>
                 </a>
 
             </div>
             <div class="col">
-                <a style="text-decoration:none" href="CGU.html">
+                <a style="text-decoration:none" href="CGU.php">
                     <h1>CGU</h1>
                 </a>
 
@@ -121,6 +122,13 @@ if ($_GET) {
             <div class="col">
                 <a style="text-decoration:none" href="mailto:pierre.sedo@eleve.isep.fr, robin.lerda@eleve.isep.fr, julien.godfroy@eleve.isep.fr, francois.hascoat@eleve.isep.fr,timothe.bonnel@eleve.isep.fr, gabriel.hercaud@eleve.isep.fr">
                     <h1>contact@ecosense.com</h1>
+                </a>
+
+            </div>
+
+            <div class="col">
+                <a style="text-decoration:none" href="resetpw.php">
+                    <h1>Modifiez votre mot de passe</h1>
                 </a>
 
             </div>
