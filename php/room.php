@@ -5,6 +5,7 @@ if (!isset($_SESSION['user_first_name'])) { //if login in session is not set
 }
 include 'config.php';
 
+
 if (isset($_GET['lang']) && !empty($_GET['lang'])) {
     if (file_exists('lang/' . $_GET['lang'] . '.php'))
         require_once('lang/' . htmlentities($_GET['lang']) . '.php');
@@ -31,6 +32,9 @@ if ($_GET) {
 extract($_POST);
 
 $room_selected = $_POST['roomselect']; //recuperele nom de la salle
+
+//recuperation des données des capteur
+include 'getlogco2.php';
 
 ?>
 
@@ -129,7 +133,9 @@ $room_selected = $_POST['roomselect']; //recuperele nom de la salle
             </div>
             <img class="cod2" src="../img/qualite-de-lair.png" alt="">
             <div>
-                <p class="description3">Le taux de CO2 actuel dans la salle est de: 850 ppm </p>
+                <p class="description3">Le taux de CO2 actuel dans la salle est de: <strong><?php
+                                                                                            echo getlogco2();
+                                                                                            ?> ppm </strong></p>
             </div>
         </div>
     </div>

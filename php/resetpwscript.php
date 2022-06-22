@@ -42,7 +42,7 @@ if ($newpw == $confirmpw) {
 
         <body>
             <div>
-                Bonjour ' . $_SESSION['user_first_name'] .  ' ' . $_SESSION['user_last_name'] . ', <br /><br />.
+                Bonjour ' . $_SESSION['user_first_name'] .  ' ' . $_SESSION['user_last_name'] . ', <br />
                 <br /><br />
                 Le mot de passe de votre compte EcoSence a bien été modifié.<br />
                 Si cette opération a été faite contre votre gré, merci de contacter votre administrateur au plus vite !<br />
