@@ -35,7 +35,7 @@ $room_selected = $_POST['roomselect']; //recuperele nom de la salle
 
 //recuperation des données des capteur
 include 'getlogco2.php';
-
+include 'getlogtemp.php';
 ?>
 
 
@@ -44,6 +44,7 @@ include 'getlogco2.php';
 <html>
 
 <head>
+
     <meta charset="utf-8" />
     <title>EcoSense | Accueil</title>
     <link rel="stylesheet" href="../css/room.css" />
@@ -109,7 +110,9 @@ include 'getlogco2.php';
 
         <div class="score2">
             <div class="texte">
-                <p>Aujourdhui la salle est particulièrement poluée dû au taux de gaz carbonique élevé. La temperature est 2°C supérieure à la moyenne, nous vous conseillons d'aérer. Le niveau sonore est lui conforme aux normes de 62dB. </p>
+                <p dic class="capteurtemp">Aujourdhui la salle est particulièrement poluée dû au taux de gaz carbonique élevé. La temperature est <strong><?php
+                                                                                                                                                            echo getlogtemp();
+                                                                                                                                                            ?> °C </strong> supérieure à la moyenne, nous vous conseillons d'aérer. Le niveau sonore est lui conforme aux normes de 62dB. </p>
             </div>
 
         </div>
@@ -173,6 +176,17 @@ include 'getlogco2.php';
 
         </div>
     </div>
+
+
+    <script>
+        //setInterval('refresh()', 2000);
+        //
+        //function refresh() {
+        //    $('.description3').load('getlogco2.php');
+        //    $('.capteurtemp').load('getlogtemp.php');
+        //
+        //};
+    </script>
 
 </body>
 

@@ -46,7 +46,7 @@ if ($_POST) {
 
         <body>
             <div>
-                Bonjour ' . $user_last_name . ' <br /><br />Bienvenue sur EcoSense.
+                Bonjour ' . $user_last_name . ' <br /><br />Bienvenu sur EcoSense.
                 <br /><br />
                 Un compte EcoSense vous a été créé.
                 Pour y accéder, veuillez renseigner les identifiants suivants:<br />

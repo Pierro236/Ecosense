@@ -1,6 +1,7 @@
 <?php
-function getlogco2()
+function getlogtemp()
 {
+    include 'insertdata.php';
     include 'config.php';
     global $db;
     ////////////RECUPERER LE LOG
@@ -31,9 +32,14 @@ function getlogco2()
     for ($i = 0, $size = count($data_tab); $i < $size; $i++) {  //pour chaque trame mélangé
         list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
             sscanf($data_tab[$i], "%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
-        if ($c == "4") {      //si le type du capteur est 4 (capteur CO2)
+        if ($c == "3") {      //si le type du capteur est 3 (capteur de température)
             array_push($data_tab_capteur, $data_tab[$i]);   //alors on ajoute cette trame dans l'array vide
+            $horodatage = date("Y-m-d H:i:s", strtotime($year . "-" . $month . "-" . $day . " " . $hour . ":" . $min . ":" . $sec));
 
+            $resultatHorodatage = rechercher_trame_modele($db, $horodatage, $c);
+            if ($resultatHorodatage == false) {
+                inserer_trame_modele($db, $t, $o, $r, $c, $n, $v, $a, $x, $horodatage);
+            }
         }
     }
     //echo "Tabular Data:<br />";
@@ -51,7 +57,7 @@ function getlogco2()
     // décodage avec sscanf
     list($t, $o, $r, $c, $n, $v, $a, $x, $year, $month, $day, $hour, $min, $sec) =
         sscanf($trame, "%1s%4s%1s%1s%2s%4s%4s%2s%4s%2s%2s%2s%2s%2s");
-    //echo ("<br />$t,$o,$r, type capteur : $c,$n, valeur : $v,$a,$x,$year,$month,$day, heure : $hour,$min,$sec<br />");
+
 
 
     $valeur_capteur = hexdec($v);

@@ -159,3 +159,7 @@ body {
   -moz-transition: 0.1s;
   font-weight: bolder;
 }
+
+strong{
+  font-size:30px
+}
