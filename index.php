@@ -8,7 +8,7 @@ if (isset($_SESSION['user_first_name'])) { //if login in session is not set
 
 <?php
 
-include 'php\config.php';
+include 'php/config.php';
 
 if (isset($_GET['lang']) && !empty($_GET['lang'])) {
     if (file_exists('lang/' . $_GET['lang'] . '.php'))
